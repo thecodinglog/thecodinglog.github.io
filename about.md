@@ -4,12 +4,18 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+THECOTHE
 
-### More Information
+### Interested in
 
-A place to include any other types of information that you'd like to include about yourself.
+* Full stack design
+* Windows application development
+* SQL Tuning
+* MES Framework
+* Mobile business consulting
+* System architecture design
+* Maintaining MES
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[thefuturecreator@gmail.com](mailto:thefuturecreator@gmail.com)
