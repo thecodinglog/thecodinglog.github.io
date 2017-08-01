@@ -49,9 +49,9 @@ public class Box {
 }
 ```
 
-_set()_과 _get()_ 메소드는 _Object_ 타입을 파리미터로 받고 _Object_ 타입을 리턴하므로 어떤 타입이든 주고 받을 수 있다. 그러나 컴파일 타임에 어떤 클래스를 쓰고 있는지 검증할 방법이 없다.
+_set()_ 과 _get()_ 메소드는 _Object_ 타입을 파리미터로 받고 _Object_ 타입을 리턴하므로 어떤 타입이든 주고 받을 수 있다. 그러나 컴파일 타임에 어떤 클래스를 쓰고 있는지 검증할 방법이 없다.
 
-코드에서 _Integer_를 넣고, 다른 코드 부분에서 _String_이라 생각하고 사용하게 되면 런타임 에러가 발생한다.
+코드에서 _Integer_ 를 넣고, 다른 코드 부분에서 _String_ 이라 생각하고 사용하게 되면 런타임 에러가 발생한다.
 
 #### 제네릭 Box Class
 
@@ -61,7 +61,7 @@ _set()_과 _get()_ 메소드는 _Object_ 타입을 파리미터로 받고 _Objec
 class name<T1, T2, ..., Tn> { /* ... */ }
 ```
 
-클래스 이름 뒤에 타입 파라미터 부분(&lt; &gt;)이 오는데, 이것이 타입 파라미터 (type parameters)또는 타입 변수(type variables) _T1_,  _T2_, ..., _Tn_을 정의한다.
+클래스 이름 뒤에 타입 파라미터 부분(&lt; &gt;)이 오는데, 이것이 타입 파라미터 (type parameters)또는 타입 변수(type variables) _T1_ ,  _T2_ , ..., _Tn_ 을 정의한다.
 
 ```java
 /**
@@ -77,7 +77,7 @@ public class Box<T> {
 }
 ```
 
-코드에서 볼 수 있듯이 _Object_가 _T_로 교체됐다. 타입 변수는 기본(Primitive) 타입을 제외한 모든 타입을 쓸 수 있다.(Class, Interface 등)
+코드에서 볼 수 있듯이 _Object_ 가 _T_ 로 교체됐다. 타입 변수는 기본(Primitive) 타입을 제외한 모든 타입을 쓸 수 있다.(Class, Interface 등)
 
 #### 타입 파라미터 명명 규칙
 
@@ -94,27 +94,27 @@ public class Box<T> {
 
 #### 제네릭 타입의 호출 및 객체화
 
-제네릭 Box 클래스를 코드 안에서 참조하기 위해서는, T를 다른 고정 값으로 교체하는 작업인 제네릭 타입 호출(Generic type invocation)을 해야 한다. _Integer _를 예를 들면
+제네릭 Box 클래스를 코드 안에서 참조하기 위해서는, T를 다른 고정 값으로 교체하는 작업인 제네릭 타입 호출(Generic type invocation)을 해야 한다. _Integer _ 를 예를 들면
 
 ```java
 Box<Integer> integerBox;
 ```
 
-제네릭 타입 호출이 일반 메서드 호출과 비슷하다고 생각할 수 있지만, 메서드에 인수를 전달하는 대신 _Integer _타입 인수를 Box 클래스 자체에 전달한다는 점이 다르다.
+제네릭 타입 호출이 일반 메서드 호출과 비슷하다고 생각할 수 있지만, 메서드에 인수를 전달하는 대신 _Integer_ 타입 인수를 Box 클래스 자체에 전달한다는 점이 다르다.
 
 > **타입 파라미터(Type parameter)와 타입 인자(Type Argument) 용어**
 >
-> 많은 개발자들이 Type parameter와 Type argument을 구분없이 사용한다. 그러나 두 용어는 엄연히 다른 의미이다. 매개변수 타입을 만들기 위해 타입 인자를 제공한다. 그러므로 _Foo&lt;T&gt;_에서 _T_는 타입 파라미터이고 _Foo&lt;String&gt;_에서 _String_은 타입 인자이다.
+> 많은 개발자들이 Type parameter와 Type argument을 구분없이 사용한다. 그러나 두 용어는 엄연히 다른 의미이다. 매개변수 타입을 만들기 위해 타입 인자를 제공한다. 그러므로 _Foo&lt;T&gt;_ 에서 _T_ 는 타입 파라미터이고 _Foo&lt;String&gt;_ 에서 _String_ 은 타입 인자이다.
 
 일반적인 변수 선언과 비슷하게 위 코드도 Box 객체를 생성하지는 않고 _integerBox_ 는 Integer형의 Box의 참조 변수를 선언한 것이다.
 
 제네릭 타입 호출를 일반적으로 파라미터와된 타입(Parameterized type)이라고 한다.
 
-이 클래스를 초기화 하기 위해서는 _new _키워드를 사용해야 하며 클래스 이름과 양 괄호 사이에 _&lt;Integer&gt;_를 붙여야 한다.
+이 클래스를 초기화 하기 위해서는 _new_ 키워드를 사용해야 하며 클래스 이름과 양 괄호 사이에 _&lt;Integer&gt;_ 를 붙여야 한다.
 
 #### 다이아몬드
 
-Java SE 7 이상에서는 컴파일러가 컨텍스트의 타입 인수를 결정하거나 추론 할 수 있는 경우 타입 인자를 (&lt;&gt;)으로 바꿀 수 있다. 이 괄호 쌍 (&lt;&gt;)은 비공식적으로 다이아몬드라고 불린다. 예를 들어, 다음 구문으로 사용하여 _Box &lt;Integer&gt;_의 인스턴스를 만들 수 있다.
+Java SE 7 이상에서는 컴파일러가 컨텍스트의 타입 인수를 결정하거나 추론 할 수 있는 경우 타입 인자를 (&lt;&gt;)으로 바꿀 수 있다. 이 괄호 쌍 (&lt;&gt;)은 비공식적으로 다이아몬드라고 불린다. 예를 들어, 다음 구문으로 사용하여 _Box &lt;Integer&gt;_ 의 인스턴스를 만들 수 있다.
 
 ```java
 Box<Integer> integerBox = new Box<>();
@@ -122,7 +122,7 @@ Box<Integer> integerBox = new Box<>();
 
 #### 다중 타입 파라미터
 
-제네릭 클래스는 여러개의 타입 파라미터를 가질 수 있다. 예를 들어 제네릭 클래스인 _OrderdPair _클래스는 제네릭 인터페이스인 _Pair _인터페이스를 구현한다.
+제네릭 클래스는 여러개의 타입 파라미터를 가질 수 있다. 예를 들어 제네릭 클래스인 _OrderdPair_ 클래스는 제네릭 인터페이스인 _Pair_ 인터페이스를 구현한다.
 
 ```java
 public interface Pair<K, V> {
@@ -152,9 +152,9 @@ Pair<String, Integer> p1 = new OrderedPair<String, Integer>("Even", 8);
 Pair<String, String>  p2 = new OrderedPair<String, String>("hello", "world");
 ```
 
-_new OrderedPari&lt;String, Interger&gt; _구문은 _K_를 _String_으로, _V_을 _Integer_로 초기화한다. 그러므로 _OrderedPair_의 생성자 파라미터 타입은 _String_과 _Integer_이다. Autuboxing 기능 때문에 _String_과 _int _가 클래스로 전달된다.
+_new OrderedPari&lt;String, Interger&gt;_ 구문은 _K_ 를 _String_ 으로, _V_ 을 _Integer_ 로 초기화한다. 그러므로 _OrderedPair_ 의 생성자 파라미터 타입은 _String_ 과 _Integer_ 이다. Autuboxing 기능 때문에 _String_ 과 _int_ 가 클래스로 전달된다.
 
-다이아몬드 부분에서 언급했듯이 자바 컴파일러는 _K_와 _V_를 선언부 _OrderedPair&lt;String, Integer&gt;_ 에서 추론할 수 있으므로 위 구문은 아래와 같이 줄여 쓸 수 있다.
+다이아몬드 부분에서 언급했듯이 자바 컴파일러는 _K_ 와 _V_ 를 선언부 _OrderedPair&lt;String, Integer&gt;_ 에서 추론할 수 있으므로 위 구문은 아래와 같이 줄여 쓸 수 있다.
 
 ```java
 OrderedPair<String, Integer> p1 = new OrderedPair<>("Even", 8);
@@ -165,7 +165,7 @@ OrderedPair<String, String>  p2 = new OrderedPair<>("hello", "world");
 
 #### 파리미터 타입(Parameterized Types)
 
-타입 파라미터(예를 들면 _K_나 _V_ 같은 것)들은, 파라미터 타입(parameterized type) (예를 들어 _List&lt;String&gt;_)으로도 다음과 같이 치환 가능하다.
+타입 파라미터(예를 들면 _K_ 나 _V_ 같은 것)들은, 파라미터 타입(parameterized type) (예를 들어 _List&lt;String&gt;_ )으로도 다음과 같이 치환 가능하다.
 
 ```java
 OrderedPair<String, Box<Integer>> p = new OrderedPair<>("primes", new Box<Integer>(...));
@@ -182,7 +182,7 @@ public class Box<T> {
 }
 ```
 
-_Box&lt;T&gt;_의 파라미터 타입을 만들기 위해서는 실 타입 인자(actual type argument)를 형식 타입 파라미터(formal type parameter) _T_에다가 넣어 줘야 한다.
+_Box&lt;T&gt;_ 의 파라미터 타입을 만들기 위해서는 실 타입 인자(actual type argument)를 형식 타입 파라미터(formal type parameter) _T_ 에다가 넣어 줘야 한다.
 
 ```java
 Box<Integer> intBox = new Box<>();
@@ -194,7 +194,7 @@ Box<Integer> intBox = new Box<>();
 Box rawBox = new Box();
 ```
 
-그러므로 _Box _는 제네릭 타입 _Box&lt;T&gt;_의 원시 타입이다. 하지만 일반 클래스나 인터페이스는 원시 타입이 아니다.
+그러므로 _Box_ 는 제네릭 타입 _Box&lt;T&gt;_ 의 원시 타입이다. 하지만 일반 클래스나 인터페이스는 원시 타입이 아니다.
 
 원시 타입은 기존 코드에서 많이 보이는데 그 이유는 많은 Collections 같은 API 클래스들은 JDK 5.0 이전에 만들어 졌기 때문이다.
 
@@ -256,7 +256,7 @@ public class WarningDemo {
 
 제네릭 메서드는 꺾쇠 괄호 안에 파라미터가 오고 메서드의 반환 형식 앞에 둔다. 정적 제네릭 메소드의 경우, 타입 파라미터 섹션은 메소드의 리턴 유형 앞에 둔다.
 
-_Util _클래스는 두 _Pair_ 객체를 비교하는 제네릭 메소드 _compare_를 가지고 있다.
+_Util_ 클래스는 두 _Pair_ 객체를 비교하는 제네릭 메소드 _compare_ 를 가지고 있다.
 
 ```java
 public class Util {
@@ -303,9 +303,9 @@ boolean same = Util.compare(p1, p2);
 
 ## 경계가 있는 타입 파라미터(Bounded Type Parameters)
 
-파라미터 타입(Parameterized Type)에서 사용할 수 있는 타입 인자를 제한하고자 할 때가 있다. 예를 들어 숫자를 처리하는 메소드는 _Number_나 _Number_의 하위 클래스의 인스턴스만 허용하고 하는 경우이다. 이 때문에 경계가 있는 타입 파라미터(bounded type parameter)[^1]를 사용한다.
+파라미터 타입(Parameterized Type)에서 사용할 수 있는 타입 인자를 제한하고자 할 때가 있다. 예를 들어 숫자를 처리하는 메소드는 _Number_ 나 _Number_ 의 하위 클래스의 인스턴스만 허용하고 하는 경우이다. 이 때문에 경계가 있는 타입 파라미터(bounded type parameter)[^1]를 사용한다.
 
-Bounded type parameter를 선언하려면 타입 파리미터명 다음 _extends _키워드와 상위 타입(위 예제인 경우 _Number_)을 차례로 나열하면 된다. 여기서 _extends_는 _extends(클래스_에서) 또는 _implements_(인터페이스에서)를 의미한다.
+Bounded type parameter를 선언하려면 타입 파리미터명 다음 _extends_ 키워드와 상위 타입(위 예제인 경우 _Number_ )을 차례로 나열하면 된다. 여기서 _extends_ 는 _extends(클래스_에서) 또는 _implements_ (인터페이스에서)를 의미한다.
 
 ```java
 public class Box<T> {
@@ -333,7 +333,7 @@ public class Box<T> {
 }
 ```
 
-Bounded type parameter를 넣기 위해 _inspect _메소드를 수정하면 컴파일 오류가 발생한다. 왜냐하면 _inspect _메소드를 _String _타입의 인자를 넘겨 호출하고 있기 때문에다.
+Bounded type parameter를 넣기 위해 _inspect_ 메소드를 수정하면 컴파일 오류가 발생한다. 왜냐하면 _inspect_ 메소드를 _String_ 타입의 인자를 넘겨 호출하고 있기 때문에다.
 
 ```
 Box.java:21: <U>inspect(U) in Box<java.lang.Integer> cannot
@@ -343,7 +343,7 @@ Box.java:21: <U>inspect(U) in Box<java.lang.Integer> cannot
 1 error
 ```
 
-이렇게 Bounded type parameter는 사용할 수 있는 타입에 제약을 줄 수 있을 뿐만 아니라,  Bound된 타입의 메소드를 사용할 수 있게 된다.
+이렇게 Bounded type parameter는 사용할 수 있는 타입에 제약을 줄 수 있을 뿐만 아니라, Bound된 타입의 메소드를 사용할 수 있게 된다.
 
 ```java
 public class NaturalNumber<T extends Integer> {
@@ -360,7 +360,7 @@ public class NaturalNumber<T extends Integer> {
 }
 ```
 
-_isEven _메소드는 _n_을 통해 _Integer _클래스에 정의 된 _intValue _메소드를 호출한다.
+_isEven_ 메소드는 _n_ 을 통해 _Integer_ 클래스에 정의 된 _intValue_ 메소드를 호출한다.
 
 #### 다중 경계(Multiple Bounds)
 
@@ -388,7 +388,7 @@ class D <T extends B & A & C> { /* ... */ }  // compile-time error
 
 ### 제네릭 메소드와 Bounded Type Parameters
 
-Bounded type parameter는 제네릭 알고리즘 구현의 핵심이다. 배열 _T \[ \]_에서 지정된 요소 _elem_보다 큰 요소의 수를 계산하는 다음 메소드를 보면
+Bounded type parameter는 제네릭 알고리즘 구현의 핵심이다. 배열 _T \[ \]_ 에서 지정된 요소 _elem_ 보다 큰 요소의 수를 계산하는 다음 메소드를 보면
 
 ```java
 public static <T> int countGreaterThan(T[] anArray, T elem) {
@@ -400,7 +400,7 @@ public static <T> int countGreaterThan(T[] anArray, T elem) {
 }
 ```
 
-이 메서드의 구현은 간단하지만 greater than 연산자 (&gt;)는 _short, int, double, long, float, byte_ 및 _char_ 같은 기본 유형에만 적용되므로 컴파일되지 않는다. &gt; 연산자를 사용하여 객체를 비교할 수 없기 때문에  _Comparable &lt;T&gt; _인터페이스로 경계가 타입 파라미터를 사용하면 된다.
+이 메서드의 구현은 간단하지만 greater than 연산자 (&gt;)는 _short, int, double, long, float, byte_ 및 _char_ 같은 기본 유형에만 적용되므로 컴파일되지 않는다. &gt; 연산자를 사용하여 객체를 비교할 수 없기 때문에  _Comparable &lt;T&gt;_ 인터페이스로 경계가 타입 파라미터를 사용하면 된다.
 
 ```java
 public interface Comparable<T> {
@@ -422,7 +422,7 @@ public static <T extends Comparable<T>> int countGreaterThan(T[] anArray, T elem
 
 ## 제네릭스, 상속, 하위 타입(Generics, Inheritance, Subtypes)
 
-특정 타입의 오브젝트를 이 타입과 호환이 되는 다른 타입에 할당하는 것은 가능하다. 예를 들어 _Object_는 _Integer_의 Supertype 중 하나기 떄문에 _Integer _값을 _Object_에 할당할 수 있다.
+특정 타입의 오브젝트를 이 타입과 호환이 되는 다른 타입에 할당하는 것은 가능하다. 예를 들어 _Object_ 는 _Integer_ 의 Supertype 중 하나기 떄문에 _Integer_ 값을 _Object_ 에 할당할 수 있다.
 
 ```java
 Object someObject = new Object();
@@ -430,7 +430,7 @@ Integer someInteger = new Integer(10);
 someObject = someInteger;   // OK
 ```
 
-객체 지향에서 이것을 "is a" 관계라고 한다. _Integer_는 일종의 _Object_이므로 할당이 허용된다. 그러나 _Integer_는 일종의 _Number_이기도하므로 다음 코드도 유효하다.
+객체 지향에서 이것을 "is a" 관계라고 한다. _Integer_ 는 일종의 _Object_ 이므로 할당이 허용된다. 그러나 _Integer_ 는 일종의 _Number_ 이기도하므로 다음 코드도 유효하다.
 
 ```java
 public void someMethod(Number n) { /* ... */ }
@@ -439,7 +439,7 @@ someMethod(new Integer(10));   // OK
 someMethod(new Double(10.1));   // OK
 ```
 
-제네릭에서도 마찬가지로 타입 인자로 _Number_를 넘겨서 제네릭 타입호출을 하면, _Number_와 호환되는 모든_ add_ 메소드 호출도 허용된다.
+제네릭에서도 마찬가지로 타입 인자로 _Number_ 를 넘겨서 제네릭 타입호출을 하면, _Number_ 와 호환되는 모든 _add_ 메소드 호출도 허용된다.
 
 ```java
 Box<Number> box = new Box<Number>();
@@ -453,15 +453,15 @@ box.add(new Double(10.1));  // OK
 public void boxTest(Box<Number> n) { /* ... */ }
 ```
 
-어떤 타입이 인자로 허용이 될까? 이 메소드의 시그너처를 보면 _Box&lt;Number&gt; _유형의 단일 인수를 받는다는 것을 알 수 있다. 이게 무슨 의미인가? _Box&lt;Interger&gt;_나 _Box&lt;Double&gt;_을 어용한다는 의미인가? 답은 "아니오"이다. 왜냐하면 _Box&lt;Integer&gt;_와 _Box&lt;Double&gt;_은 _Box&lt;Number&gt;_의 서브타입이 아니기 때문이다.
+어떤 타입이 인자로 허용이 될까? 이 메소드의 시그너처를 보면 _Box&lt;Number&gt;_ 유형의 단일 인수를 받는다는 것을 알 수 있다. 이게 무슨 의미인가? _Box&lt;Interger&gt;_ 나 _Box&lt;Double&gt;_  어용한다는 의미인가? 답은 "아니오"이다. 왜냐하면 _Box&lt;Integer&gt;_ 와 _Box&lt;Double&gt;_ 은 _Box&lt;Number&gt;_ 의 서브타입이 아니기 때문이다.
 
 이건은 제네릭으로 프로그래밍 할 때 일반적으로 자주하는 오해이다. 하지만 이것은 반드시 알아야하는 중요한 컨셉이다.
 
 ![](https://docs.oracle.com/javase/tutorial/figures/java/generics-subtypeRelationship.gif "diagram showing that Box&amp;lt;Integer&amp;gt; is not a subtype of Box&amp;lt;Number&amp;gt;")
 
-_Integer_는 _Number_의 서브타입 이지만, _Box&lt;Integer&gt;_는  _Box&lt;Number&gt; _의 서브타입이 아니다.
+_Integer_ 는 _Number_ 의 서브타입 이지만, _Box&lt;Integer&gt;_ 는  _Box&lt;Number&gt;_ 의 서브타입이 아니다.
 
-> **Note : **두 타입 A, B가 있을 때(예를 들면 _Number _와 _Integer_), _MyClass&lt;A&gt;_와 _MyClass&lt;B&gt;_는 A와 B가 연관 관계가 있더라도 아무런 관련이 없다. 두 클래스의 공통 부모는 _Object _뿐이다.
+> **Note : **두 타입 A, B가 있을 때(예를 들면 _Number_ 와 _Integer_ ), _MyClass&lt;A&gt;_ 와 _MyClass&lt;B&gt;_ 는 A와 B가 연관 관계가 있더라도 아무런 관련이 없다. 두 클래스의 공통 부모는 _Object_ 뿐이다.
 
 #### 제네릭 클래스와 하위 타입
 
