@@ -14,9 +14,9 @@
 
 ## 왜 제네릭스를 쓰는가?
 
-제네릭스는 타입\(Class, Interface\)들을 정의할 때 타입을 파라미터로 쓸수 있게 하는 것이다.
+제네릭스는 타입(Class, Interface)들을 정의할 때 타입을 파라미터로 쓸수 있게 하는 것이다.
 
-일반 메소드와 마찬가지로 타입 파라미터는 코드의 재사용성을 높힌다. 메소드의 파라미터와 다른 점은 메소드의 파라미터는 값\(Value\)이고, 타입 파라미터의 파라미터는 타입\(Type\)이다.
+일반 메소드와 마찬가지로 타입 파라미터는 코드의 재사용성을 높힌다. 메소드의 파라미터와 다른 점은 메소드의 파라미터는 값(Value)이고, 타입 파라미터의 파라미터는 타입(Type)이다.
 
 #### 제네릭스가 주는 장점
 
@@ -49,7 +49,7 @@ public class Box {
 }
 ```
 
-_set\(\)_과 _get\(\)_ 메소드는 _Object_ 타입을 파리미터로 받고 _Object_ 타입을 리턴하므로 어떤 타입이든 주고 받을 수 있다. 그러나 컴파일 타임에 어떤 클래스를 쓰고 있는지 검증할 방법이 없다.
+_set()_과 _get()_ 메소드는 _Object_ 타입을 파리미터로 받고 _Object_ 타입을 리턴하므로 어떤 타입이든 주고 받을 수 있다. 그러나 컴파일 타임에 어떤 클래스를 쓰고 있는지 검증할 방법이 없다.
 
 코드에서 _Integer_를 넣고, 다른 코드 부분에서 _String_이라 생각하고 사용하게 되면 런타임 에러가 발생한다.
 
@@ -61,7 +61,7 @@ _set\(\)_과 _get\(\)_ 메소드는 _Object_ 타입을 파리미터로 받고 _O
 class name<T1, T2, ..., Tn> { /* ... */ }
 ```
 
-클래스 이름 뒤에 타입 파라미터 부분\(&lt; &gt;\)이 오는데, 이것이 타입 파라미터 \(type parameters\)또는 타입 변수\(type variables\) _T1_,  _T2_, ..., _Tn_을 정의한다.
+클래스 이름 뒤에 타입 파라미터 부분(&lt; &gt;)이 오는데, 이것이 타입 파라미터 (type parameters)또는 타입 변수(type variables) _T1_,  _T2_, ..., _Tn_을 정의한다.
 
 ```java
 /**
@@ -77,7 +77,7 @@ public class Box<T> {
 }
 ```
 
-코드에서 볼 수 있듯이 _Object_가 _T_로 교체됐다. 타입 변수는 기본\(Primitive\) 타입을 제외한 모든 타입을 쓸 수 있다.\(Class, Interface 등\)
+코드에서 볼 수 있듯이 _Object_가 _T_로 교체됐다. 타입 변수는 기본(Primitive) 타입을 제외한 모든 타입을 쓸 수 있다.(Class, Interface 등)
 
 #### 타입 파라미터 명명 규칙
 
@@ -85,7 +85,7 @@ public class Box<T> {
 
 > **일반 적으로 쓰는 타입 파라미터 들**
 >
-> * E - Element \(used extensively by the Java Collections Framework\)
+> * E - Element (used extensively by the Java Collections Framework)
 > * K - Key
 > * N - Number
 > * T - Type
@@ -94,7 +94,7 @@ public class Box<T> {
 
 #### 제네릭 타입의 호출 및 객체화
 
-제네릭 Box 클래스를 코드 안에서 참조하기 위해서는, T를 다른 고정 값으로 교체하는 작업인 제네릭 타입 호출\(Generic type invocation\)을 해야 한다. _Integer _를 예를 들면
+제네릭 Box 클래스를 코드 안에서 참조하기 위해서는, T를 다른 고정 값으로 교체하는 작업인 제네릭 타입 호출(Generic type invocation)을 해야 한다. _Integer _를 예를 들면
 
 ```java
 Box<Integer> integerBox;
@@ -102,19 +102,19 @@ Box<Integer> integerBox;
 
 제네릭 타입 호출이 일반 메서드 호출과 비슷하다고 생각할 수 있지만, 메서드에 인수를 전달하는 대신 _Integer _타입 인수를 Box 클래스 자체에 전달한다는 점이 다르다.
 
-> **타입 파라미터\(Type parameter\)와 타입 인자\(Type Argument\) 용어**
+> **타입 파라미터(Type parameter)와 타입 인자(Type Argument) 용어**
 >
 > 많은 개발자들이 Type parameter와 Type argument을 구분없이 사용한다. 그러나 두 용어는 엄연히 다른 의미이다. 매개변수 타입을 만들기 위해 타입 인자를 제공한다. 그러므로 _Foo&lt;T&gt;_에서 _T_는 타입 파라미터이고 _Foo&lt;String&gt;_에서 _String_은 타입 인자이다.
 
 일반적인 변수 선언과 비슷하게 위 코드도 Box 객체를 생성하지는 않고 _integerBox_ 는 Integer형의 Box의 참조 변수를 선언한 것이다.
 
-제네릭 타입 호출를 일반적으로 파라미터와된 타입\(Parameterized type\)이라고 한다.
+제네릭 타입 호출를 일반적으로 파라미터와된 타입(Parameterized type)이라고 한다.
 
 이 클래스를 초기화 하기 위해서는 _new _키워드를 사용해야 하며 클래스 이름과 양 괄호 사이에 _&lt;Integer&gt;_를 붙여야 한다.
 
 #### 다이아몬드
 
-Java SE 7 이상에서는 컴파일러가 컨텍스트의 타입 인수를 결정하거나 추론 할 수 있는 경우 타입 인자를 \(&lt;&gt;\)으로 바꿀 수 있다. 이 괄호 쌍 \(&lt;&gt;\)은 비공식적으로 다이아몬드라고 불린다. 예를 들어, 다음 구문으로 사용하여 _Box &lt;Integer&gt;_의 인스턴스를 만들 수 있다.
+Java SE 7 이상에서는 컴파일러가 컨텍스트의 타입 인수를 결정하거나 추론 할 수 있는 경우 타입 인자를 (&lt;&gt;)으로 바꿀 수 있다. 이 괄호 쌍 (&lt;&gt;)은 비공식적으로 다이아몬드라고 불린다. 예를 들어, 다음 구문으로 사용하여 _Box &lt;Integer&gt;_의 인스턴스를 만들 수 있다.
 
 ```java
 Box<Integer> integerBox = new Box<>();
@@ -163,17 +163,17 @@ OrderedPair<String, String>  p2 = new OrderedPair<>("hello", "world");
 
 제네릭 인터페이스를 생성하려면 제네릭 클래스를 생성하는 방식을 따르면 된다.
 
-#### 파리미터 타입\(Parameterized Types\)
+#### 파리미터 타입(Parameterized Types)
 
-타입 파라미터\(예를 들면 _K_나 _V_ 같은 것\)들은, 파라미터 타입\(parameterized type\) \(예를 들어 _List&lt;String&gt;_\)으로도 다음과 같이 치환 가능하다.
+타입 파라미터(예를 들면 _K_나 _V_ 같은 것)들은, 파라미터 타입(parameterized type) (예를 들어 _List&lt;String&gt;_)으로도 다음과 같이 치환 가능하다.
 
 ```java
 OrderedPair<String, Box<Integer>> p = new OrderedPair<>("primes", new Box<Integer>(...));
 ```
 
-### 원시 타입\(Raw Types\)
+### 원시 타입(Raw Types)
 
-제네릭 클래스나 인터페이스에서 타입 인자를 뺀 것을 원시타입\(Raw Type\)이라고 한다. 예를 들어 다음과 같이 제네릭 클래스 Box가 있을 때
+제네릭 클래스나 인터페이스에서 타입 인자를 뺀 것을 원시타입(Raw Type)이라고 한다. 예를 들어 다음과 같이 제네릭 클래스 Box가 있을 때
 
 ```java
 public class Box<T> {
@@ -182,7 +182,7 @@ public class Box<T> {
 }
 ```
 
-_Box&lt;T&gt;_의 파라미터 타입을 만들기 위해서는 실 타입 인자\(actual type argument\)를 형식 타입 파라미터\(formal type parameter\) _T_에다가 넣어 줘야 한다.
+_Box&lt;T&gt;_의 파라미터 타입을 만들기 위해서는 실 타입 인자(actual type argument)를 형식 타입 파라미터(formal type parameter) _T_에다가 넣어 줘야 한다.
 
 ```java
 Box<Integer> intBox = new Box<>();
@@ -198,7 +198,7 @@ Box rawBox = new Box();
 
 원시 타입은 기존 코드에서 많이 보이는데 그 이유는 많은 Collections 같은 API 클래스들은 JDK 5.0 이전에 만들어 졌기 때문이다.
 
-Raw type를 사용하면 제네릭 이전에 사용하던 것 처럼 쓸 수 있다. 하위 호환성을 위해 파리미터 타입\(parameterized type\)은 원시 타입에 할당할 수 있다.
+Raw type를 사용하면 제네릭 이전에 사용하던 것 처럼 쓸 수 있다. 하위 호환성을 위해 파리미터 타입(parameterized type)은 원시 타입에 할당할 수 있다.
 
 ```java
 Box<String> stringBox = new Box<>();
@@ -252,7 +252,7 @@ public class WarningDemo {
 
 ## 제네릭 메소드
 
-제네릭 메소드는 메소드 스스로 타입 파라미터를 도입해서 쓰는 메소드 이다. 제네릭 타입과 유사하지만 타입 파라미터의 범위\(Scope\)은 메소드로 제한된다. Static, non-static 메소드와 생성자도 지원된다.
+제네릭 메소드는 메소드 스스로 타입 파라미터를 도입해서 쓰는 메소드 이다. 제네릭 타입과 유사하지만 타입 파라미터의 범위(Scope)은 메소드로 제한된다. Static, non-static 메소드와 생성자도 지원된다.
 
 제네릭 메서드는 꺾쇠 괄호 안에 파라미터가 오고 메서드의 반환 형식 앞에 둔다. 정적 제네릭 메소드의 경우, 타입 파라미터 섹션은 메소드의 리턴 유형 앞에 둔다.
 
@@ -301,11 +301,11 @@ boolean same = Util.compare(p1, p2);
 
 타입 추론은 제네릭 메소드를 일반 메소드인것처럼 쓸 수 있게 한다.
 
-## 경계가 있는 타입 파라미터\(Bounded Type Parameters\)
+## 경계가 있는 타입 파라미터(Bounded Type Parameters)
 
-파라미터 타입\(Parameterized Type\)에서 사용할 수 있는 타입 인자를 제한하고자 할 때가 있다. 예를 들어 숫자를 처리하는 메소드는 _Number_나 _Number_의 하위 클래스의 인스턴스만 허용하고 하는 경우이다. 이 때문에 경계가 있는 타입 파라미터\(bounded type parameter\)[^1]를 사용한다.
+파라미터 타입(Parameterized Type)에서 사용할 수 있는 타입 인자를 제한하고자 할 때가 있다. 예를 들어 숫자를 처리하는 메소드는 _Number_나 _Number_의 하위 클래스의 인스턴스만 허용하고 하는 경우이다. 이 때문에 경계가 있는 타입 파라미터(bounded type parameter)[^1]를 사용한다.
 
-Bounded type parameter를 선언하려면 타입 파리미터명 다음 _extends _키워드와 상위 타입\(위 예제인 경우 _Number_\)을 차례로 나열하면 된다. 여기서 _extends_는 _extends\(클래스_에서\) 또는 _implements_\(인터페이스에서\)를 의미한다.
+Bounded type parameter를 선언하려면 타입 파리미터명 다음 _extends _키워드와 상위 타입(위 예제인 경우 _Number_)을 차례로 나열하면 된다. 여기서 _extends_는 _extends(클래스_에서) 또는 _implements_(인터페이스에서)를 의미한다.
 
 ```java
 public class Box<T> {
@@ -362,7 +362,7 @@ public class NaturalNumber<T extends Integer> {
 
 _isEven _메소드는 _n_을 통해 _Integer _클래스에 정의 된 _intValue _메소드를 호출한다.
 
-#### 다중 경계\(Multiple Bounds\)
+#### 다중 경계(Multiple Bounds)
 
 앞의 예제는 단일 바인딩에서 타입 파라미터를 사용하는 방법을 보여 주지만 타입 파라미터는 여러 경계를 가질 수 있다.
 
@@ -400,7 +400,7 @@ public static <T> int countGreaterThan(T[] anArray, T elem) {
 }
 ```
 
-이 메서드의 구현은 간단하지만 greater than 연산자 \(&gt;\)는 _short, int, double, long, float, byte_ 및 _char_ 같은 기본 유형에만 적용되므로 컴파일되지 않는다. &gt; 연산자를 사용하여 객체를 비교할 수 없기 때문에  _Comparable &lt;T&gt; _인터페이스로 경계가 타입 파라미터를 사용하면 된다.
+이 메서드의 구현은 간단하지만 greater than 연산자 (&gt;)는 _short, int, double, long, float, byte_ 및 _char_ 같은 기본 유형에만 적용되므로 컴파일되지 않는다. &gt; 연산자를 사용하여 객체를 비교할 수 없기 때문에  _Comparable &lt;T&gt; _인터페이스로 경계가 타입 파라미터를 사용하면 된다.
 
 ```java
 public interface Comparable<T> {
@@ -420,7 +420,7 @@ public static <T extends Comparable<T>> int countGreaterThan(T[] anArray, T elem
 }
 ```
 
-## 제네릭스, 상속, 하위 타입\(Generics, Inheritance, Subtypes\)
+## 제네릭스, 상속, 하위 타입(Generics, Inheritance, Subtypes)
 
 특정 타입의 오브젝트를 이 타입과 호환이 되는 다른 타입에 할당하는 것은 가능하다. 예를 들어 _Object_는 _Integer_의 Supertype 중 하나기 떄문에 _Integer _값을 _Object_에 할당할 수 있다.
 
@@ -461,7 +461,7 @@ public void boxTest(Box<Number> n) { /* ... */ }
 
 _Integer_는 _Number_의 서브타입 이지만, _Box&lt;Integer&gt;_는  _Box&lt;Number&gt; _의 서브타입이 아니다.
 
-> **Note : **두 타입 A, B가 있을 때\(예를 들면 _Number _와 _Integer_\), _MyClass&lt;A&gt;_와 _MyClass&lt;B&gt;_는 A와 B가 연관 관계가 있더라도 아무런 관련이 없다. 두 클래스의 공통 부모는 _Object _뿐이다.
+> **Note : **두 타입 A, B가 있을 때(예를 들면 _Number _와 _Integer_), _MyClass&lt;A&gt;_와 _MyClass&lt;B&gt;_는 A와 B가 연관 관계가 있더라도 아무런 관련이 없다. 두 클래스의 공통 부모는 _Object _뿐이다.
 
 #### 제네릭 클래스와 하위 타입
 
@@ -544,7 +544,7 @@ Box #1 contains [20]
 Box #2 contains [30]
 ```
 
-제네릭 메소드 _addBox_는 타입 파리미터 _U_를 정의했다. 일반적으로 자바 컴파일러는 제네릭 메소드 호출의 타입 파라미터를 추론할 수 있다. 따라서 대부분의 경우는 지정할 필요가 없다. _addBox_라는 제네릭 메소드를 호출할 때 타입 파라미터의 타입 힌트\(type witness\)를 아래와 같이 줄 수 있다.
+제네릭 메소드 _addBox_는 타입 파리미터 _U_를 정의했다. 일반적으로 자바 컴파일러는 제네릭 메소드 호출의 타입 파라미터를 추론할 수 있다. 따라서 대부분의 경우는 지정할 필요가 없다. _addBox_라는 제네릭 메소드를 호출할 때 타입 파라미터의 타입 힌트(type witness)를 아래와 같이 줄 수 있다.
 
 ```java
 BoxDemo.<Integer>addBox(Integer.valueOf(10), listOfIntegerBoxes);
@@ -554,19 +554,19 @@ BoxDemo.<Integer>addBox(Integer.valueOf(10), listOfIntegerBoxes);
 
 #### 타입 추론과 제네릭 클래스의 객체화
 
-컴파일러가 컨텍스트의 형식 인수를 유추 할 수있는 경우 제네릭 클래스의 생성자를 호출하는 데 필요한 형식 인수를 형식 매개 변수 집합 \(&lt;&gt;\)의 빈 집합으로 바꿀 수 있다. 이 괄호 쌍은 비공식적으로 다이아몬드라고 부른다.
+컴파일러가 컨텍스트의 형식 인수를 유추 할 수있는 경우 제네릭 클래스의 생성자를 호출하는 데 필요한 형식 인수를 형식 매개 변수 집합 (&lt;&gt;)의 빈 집합으로 바꿀 수 있다. 이 괄호 쌍은 비공식적으로 다이아몬드라고 부른다.
 
 ```java
 Map<String, List<String>> myMap = new HashMap<String, List<String>>();
 ```
 
-생성자의 파라미터 타입\(paramterized type\)를 빈 타입 파리미터로 바꿀 수 있다.
+생성자의 파라미터 타입(paramterized type)를 빈 타입 파리미터로 바꿀 수 있다.
 
 ```java
 Map<String, List<String>> myMap = new HashMap<>();
 ```
 
-제네릭 클래스를 인스턴스화 할 때 타입 추론을 사용하려면 다이아몬드를 꼭 써야한다. 다음 예제에서는 _HashMap\(\)_ 생성자가 _Map &lt;String, List &lt;String &gt;&gt; _형식이 아닌 _HashMap _원시 타입\(raw type\)을 반환하기 때문에 컴파일러에서 확인되지 않은 변환 경고를 생성한다.
+제네릭 클래스를 인스턴스화 할 때 타입 추론을 사용하려면 다이아몬드를 꼭 써야한다. 다음 예제에서는 _HashMap()_ 생성자가 _Map &lt;String, List &lt;String &gt;&gt; _형식이 아닌 _HashMap _원시 타입(raw type)을 반환하기 때문에 컴파일러에서 확인되지 않은 변환 경고를 생성한다.
 
 ```java
 Map<String, List<String>> myMap = new HashMap(); // unchecked conversion warning
@@ -590,11 +590,11 @@ MyClass 클래스의 객체화 부분을 보면
 new MyClass<Integer>("")
 ```
 
-이 구문은 파라미터 타입\(parameterized type\)인 _MyClass&lt;Integer&gt;_의 객체를 만든다. 여기서 제네릭 클래스인 _MyClass&lt;X&gt;_ 의 형식 파라미터 _X_에 대하여 _Integer _타입이라고 명시하고 있다. 형식 타입 파라미터 _T_를 가지고 있는 생성자를 보면 컴파일러가 형식 타입 파라미터 _T _를 _String _타입이라고 유추하는데 그 이유는 생성자의 실제 파라미터\(actual parameter\)가  " " 로 _String_ 객체이기 때문이다.
+이 구문은 파라미터 타입(parameterized type)인 _MyClass&lt;Integer&gt;_의 객체를 만든다. 여기서 제네릭 클래스인 _MyClass&lt;X&gt;_ 의 형식 파라미터 _X_에 대하여 _Integer _타입이라고 명시하고 있다. 형식 타입 파라미터 _T_를 가지고 있는 생성자를 보면 컴파일러가 형식 타입 파라미터 _T _를 _String _타입이라고 유추하는데 그 이유는 생성자의 실제 파라미터(actual parameter)가  " " 로 _String_ 객체이기 때문이다.
 
-#### 대상 타입\(Target Types\)
+#### 대상 타입(Target Types)
 
-자바 컴파일러는 제네릭 메소드 호출\(generic method invocation\)의 타입 파라미터를 유추하기 위해 대상 타입의 정보를 이용한다. 표현식의 대상 타입은 자바 컴파일러가 그 표현식이 어디에 나타나는지에 따라 기대하는 데이터 타입이다. 다음 메소드의 Collections.emptyList 메소드를 보면
+자바 컴파일러는 제네릭 메소드 호출(generic method invocation)의 타입 파라미터를 유추하기 위해 대상 타입의 정보를 이용한다. 표현식의 대상 타입은 자바 컴파일러가 그 표현식이 어디에 나타나는지에 따라 기대하는 데이터 타입이다. 다음 메소드의 Collections.emptyList 메소드를 보면
 
 ```java
 static <T> List<T> emptyList();
