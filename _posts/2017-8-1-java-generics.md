@@ -2,7 +2,7 @@
 >
 > This document is a translation of documents in Hangul excerpts of the Generics part of Oracle's Java Document. In order to understand the original meaning correctly, the original text is indicated in parentheses if necessary.
 
-# 제네릭스\(Generics\)
+# 제네릭스(Generics)
 
 버그 없는 소프트웨어란 존재하기 힘들다. 잘 계획하고 잘 개발해서 버그를 줄일 수는 있지만 없어지기란 사실상 힘들다. 특히 새로운 기능이 도입되거나, 코딩 라인수가 길어지게 되면 반드시 더 많이 발생한다.
 
