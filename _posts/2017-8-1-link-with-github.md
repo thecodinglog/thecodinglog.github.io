@@ -1,7 +1,7 @@
 ---
 layout: post
 comments : true
-title: 로컬pc에서 github에 push 할 수 있게 만들기
+title: 로컬pc에서 github에 push 할 수 있게 만들기(SSH)
 ---
 ### github에 로컬pc 공개키 만들고 github에 등록하기
 #### SSH key가 있는지 확인
@@ -31,21 +31,28 @@ Enter file in which to save the key(/Users/[user]/.ssh/id_rsa):
 줄바꿈이나 다른 어떠한 문자도 넣지 않도록 유의한다.
 
 - mac인 경우
+
 ```sh
  pbcopy < ~/.ssh/id_rsa.pub
 ```
 
 - windows인 경우
+
 ```sh
 clip < ~/.ssh/id_rsa.pub
 ```
+
 github에 로그인 후 우측 상단의 프로필 사진 부분을 클릭하면 메뉴가 나오는데 거기서 *세팅* 을 선택한다.
+
 ![image](../images/link-with-github/settings.png)
 
 SSH and GPG keys 를 선택한다.
+
 ![image](../images/link-with-github/menu-ssh.png)
 
-원하는 제목을 적고 위에서 클립보드로 카피한 키를 붙여 넣는다.
+원하는 제목(장비를 구분 할 수 있는 이름) 을 적고 위에서 클립보드로 카피한 키를 붙여 넣는다.
 이렇게 하고 github에서 clone을 하면 잘 동작한다.
+
 ![image](../images/link-with-github/clone.png)
+
 끝.

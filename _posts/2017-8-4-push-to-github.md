@@ -5,12 +5,13 @@ title: git project를 github로 공개하기
 ---
 ### git project를 github로 공개하기
 #### github에 repository 만들기
-git@github.com:[github 계정명]/[repository 이름].git
-#### project를 git project로 반들기
+- https://github.com/[github 계정명]/[repository 이름].git
+- git@github.com:[github 계정명]/[repository 이름].git
+#### project를 git project로 만들기
 ```
 >git init
 ```
-#### remote 등록
+#### remote 등록(SSH로 접속)
 ```
 >git remote add [remote명] [리모트주소]
 >git remote add origin git@github.com:[github 계정명]/[repository 이름].git
