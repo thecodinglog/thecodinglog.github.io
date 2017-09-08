@@ -19,15 +19,15 @@ avatar: /images/FullSizeRender 3.png
 footer-links:
   dribbble:
   email:
-  facebook:
+  facebook: gesap9
   flickr:
   github: thecodinglog/
   instagram:
-  linkedin:
+  linkedin: thecodinglog
   pinterest:
   rss: # just type anything here for a working RSS icon
-  twitter: 
-  stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
+  twitter:
+  stackoverflow: users/2926580/JeongjinKim # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
 
