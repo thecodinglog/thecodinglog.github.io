@@ -1,21 +1,13 @@
 ---
 layout: page
 title: About
-permalink: /about/
+tagline: A few more words about this theme
+permalink: /about.html
 ---
 
-THECOTHE
+This is the _Cayman Blog_ Jekyll theme. You can find out more info about customizing this theme, as well as basic usage documentation, and source code at: [cayman-blog](https://github.com/lorepirri/cayman-blog)
 
-### Interested in
+You can find the source code for _Jekyll_ at [jekyll](https://github.com/jekyll/jekyll)
 
-* Full stack design
-* Windows application development
-* SQL Tuning
-* MES Framework
-* Mobile business consulting
-* System architecture design
-* Maintaining MES
 
-### Contact me
-
-[thefuturecreator@gmail.com](mailto:thefuturecreator@gmail.com)
+[Go to the Home Page]({{ site.url }}{{ site.baseurl }})
