@@ -1,3 +1,11 @@
+---
+layout: post
+title: java 제네릭스
+date:   2017-08-01 08:43:59
+author: Jeongjin Kim
+categories: JAVA
+tags:	java generics
+---
 > 본 문서는 Oracle의 Java Document 중 [Generics ](https://docs.oracle.com/javase/tutorial/java/generics/index.html)부분을 발췌하여 번역한 문서입니다. 원래 의미를 정확하게 표현하기 위해, 필요한 경우 원문을 괄호 안에 표기하였습니다.
 >
 > This document is a translation of documents in Hangul excerpts of the Generics part of Oracle's Java Document. In order to understand the original meaning correctly, the original text is indicated in parentheses if necessary.
@@ -508,7 +516,7 @@ Serializable s = pick("d", new ArrayList<String>());
 ```java
 public class BoxDemo {
 
-  public static <U> void addBox(U u, 
+  public static <U> void addBox(U u,
       java.util.List<Box<U>> boxes) {
     Box<U> box = new Box<>();
     box.set(u);
@@ -604,4 +612,3 @@ static <T> List<T> emptyList();
 
 
 [^1]: 적절한 한글명이 없어 이하 원문으로 표기함
-

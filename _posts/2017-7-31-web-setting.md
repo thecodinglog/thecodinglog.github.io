@@ -3,6 +3,7 @@ layout: post
 title: Spring MVC 경로 설정
 date:   2017-07-31 08:43:59
 author: Jeongjin Kim
+categories: Spring
 tags:	spring mvc
 ---
 ### 목표

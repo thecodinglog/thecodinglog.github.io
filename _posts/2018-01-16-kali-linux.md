@@ -1,7 +1,10 @@
 ---
 layout: post
-comments : true
-title : kali linux 한글 폰트 설치
+title: kali linux 한글 폰트 설치
+date:   2018-01-16 08:43:59
+author: Jeongjin Kim
+categories: Security
+tags:	kali linux
 ---
 Kali linux에 한글폰트를 apt-get를 이용하여 설치할 수 있다.
 
@@ -9,7 +12,7 @@ Kali linux에 한글폰트를 apt-get를 이용하여 설치할 수 있다.
 
 그런데 가끔 메인 repository 가 불안정하여 폰트를 설치할 때 404 오류가 뜰 수 있다.
 
-![image](../images/kali-font-fail.png)
+![image](/assets/kali-font-fail.png )
 
 이럴때 [미러사이트](http://http.kali.org/README.mirrorlist)를 소스 리스트에 등록하여 다른 repository를 바라보게 변경 할 수 있다.
 
