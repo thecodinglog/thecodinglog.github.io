@@ -102,7 +102,7 @@ public class Box<T> {
 
 #### 제네릭 타입의 호출 및 객체화
 
-제네릭 Box 클래스를 코드 안에서 참조하기 위해서는, T를 다른 고정 값으로 교체하는 작업인 제네릭 타입 호출(Generic type invocation)을 해야 한다. _Integer _ 를 예를 들면
+제네릭 Box 클래스를 코드 안에서 참조하기 위해서는, T를 다른 고정 값으로 교체하는 작업인 제네릭 타입 호출(Generic type invocation)을 해야 한다. _Integer_ 를 예를 들면
 
 ```java
 Box<Integer> integerBox;
@@ -116,7 +116,7 @@ Box<Integer> integerBox;
 
 일반적인 변수 선언과 비슷하게 위 코드도 Box 객체를 생성하지는 않고 _integerBox_ 는 Integer형의 Box의 참조 변수를 선언한 것이다.
 
-제네릭 타입 호출를 일반적으로 파라미터와된 타입(Parameterized type)이라고 한다.
+제네릭 타입 호출를 일반적으로 파라미터화된 타입(Parameterized type)이라고 한다.
 
 이 클래스를 초기화 하기 위해서는 _new_ 키워드를 사용해야 하며 클래스 이름과 양 괄호 사이에 _&lt;Integer&gt;_ 를 붙여야 한다.
 
@@ -139,7 +139,6 @@ public interface Pair<K, V> {
 }
 
 public class OrderedPair<K, V> implements Pair<K, V> {
-
     private K key;
     private V value;
 
@@ -171,7 +170,7 @@ OrderedPair<String, String>  p2 = new OrderedPair<>("hello", "world");
 
 제네릭 인터페이스를 생성하려면 제네릭 클래스를 생성하는 방식을 따르면 된다.
 
-#### 파리미터 타입(Parameterized Types)
+#### 파라미터 타입(Parameterized Types)
 
 타입 파라미터(예를 들면 _K_ 나 _V_ 같은 것)들은, 파라미터 타입(parameterized type) (예를 들어 _List&lt;String&gt;_ )으로도 다음과 같이 치환 가능하다.
 
@@ -262,9 +261,9 @@ public class WarningDemo {
 
 제네릭 메소드는 메소드 스스로 타입 파라미터를 도입해서 쓰는 메소드 이다. 제네릭 타입과 유사하지만 타입 파라미터의 범위(Scope)은 메소드로 제한된다. Static, non-static 메소드와 생성자도 지원된다.
 
-제네릭 메서드는 꺾쇠 괄호 안에 파라미터가 오고 메서드의 반환 형식 앞에 둔다. 정적 제네릭 메소드의 경우, 타입 파라미터 섹션은 메소드의 리턴 유형 앞에 둔다.
+반환 타입 앞에 꺾쇠 괄호로 타입을 나열하여 제네릭 메소드를 정의힌다. 정적 제네릭 메소드의 경우도 타입 파라미터 섹션은 메소드의 리턴 타입 앞에 둔다.
 
-_Util_ 클래스는 두 _Pair_ 객체를 비교하는 제네릭 메소드 _compare_ 를 가지고 있다.
+_Util_ 클래스에 두 _Pair_ 객체를 비교하는 정적 제네릭 메소드 _compare_ 가 있다.
 
 ```java
 public class Util {
@@ -304,16 +303,17 @@ boolean same = Util.<Integer, String>compare(p1, p2);
 ```java
 Pair<Integer, String> p1 = new Pair<>(1, "apple");
 Pair<Integer, String> p2 = new Pair<>(2, "pear");
+
 boolean same = Util.compare(p1, p2);
 ```
 
-타입 추론은 제네릭 메소드를 일반 메소드인것처럼 쓸 수 있게 한다.
+타입 추론은 제네릭 메소드를 일반 메소드인것처럼 쓸 수 있게 한다. _compare_ 메소드는 제네릭 메소드이지만 실제로 쓸 때는 일반 메소드와 똑같은 방법으로 쓰고 있다.
 
 ## 경계가 있는 타입 파라미터(Bounded Type Parameters)
 
-파라미터 타입(Parameterized Type)에서 사용할 수 있는 타입 인자를 제한하고자 할 때가 있다. 예를 들어 숫자를 처리하는 메소드는 _Number_ 나 _Number_ 의 하위 클래스의 인스턴스만 허용하고 하는 경우이다. 이 때문에 경계가 있는 타입 파라미터(bounded type parameter)[^1]를 사용한다.
+파라미터 타입(Parameterized Type)에서 사용할 수 있는 타입 인자를 제한하고자 할 때가 있다. 예를 들어 숫자를 처리하는 메소드는 _Number_ 나 _Number_ 의 하위 클래스의 인스턴스만 허용하고자 하는 경우이다. 이럴때 경계가 있는 타입 파라미터(bounded type parameter)[^1]를 사용한다.
 
-Bounded type parameter를 선언하려면 타입 파리미터명 다음 _extends_ 키워드와 상위 타입(위 예제인 경우 _Number_ )을 차례로 나열하면 된다. 여기서 _extends_ 는 _extends(클래스_에서) 또는 _implements_ (인터페이스에서)를 의미한다.
+Bounded type parameter를 선언하려면 타입 파라미터명 다음 _extends_ 키워드와 상위 타입(위 예제인 경우 _Number_ )을 차례로 나열하면 된다. 여기서 _extends_ 뒤에는 클래스나 인터페이스 모두 올 수 있다.
 
 ```java
 public class Box<T> {
@@ -341,7 +341,7 @@ public class Box<T> {
 }
 ```
 
-Bounded type parameter를 넣기 위해 _inspect_ 메소드를 수정하면 컴파일 오류가 발생한다. 왜냐하면 _inspect_ 메소드를 _String_ 타입의 인자를 넘겨 호출하고 있기 때문에다.
+Bounded type parameter를 넣기 위해 _inspect_ 메소드를 호출하면 컴파일 오류가 발생한다. 왜냐하면 _inspect_ 메소드를 _String_ 타입의 인자를 넘겨 호출하고 있기 때문에다.
 
 ```
 Box.java:21: <U>inspect(U) in Box<java.lang.Integer> cannot
@@ -372,7 +372,7 @@ _isEven_ 메소드는 _n_ 을 통해 _Integer_ 클래스에 정의 된 _intValue
 
 #### 다중 경계(Multiple Bounds)
 
-앞의 예제는 단일 바인딩에서 타입 파라미터를 사용하는 방법을 보여 주지만 타입 파라미터는 여러 경계를 가질 수 있다.
+앞의 예제에서 단일 타입을 경계로 사용하는 방법을 보여줬지만, 타입 파라미터는 여러 타입의 경계를 가질 수 있다.
 
 ```java
 <T extends B1 & B2 & B3>
@@ -396,7 +396,7 @@ class D <T extends B & A & C> { /* ... */ }  // compile-time error
 
 ### 제네릭 메소드와 Bounded Type Parameters
 
-Bounded type parameter는 제네릭 알고리즘 구현의 핵심이다. 배열 _T \[ \]_ 에서 지정된 요소 _elem_ 보다 큰 요소의 수를 계산하는 다음 메소드를 보면
+Bounded type parameter는 제네릭 알고리즘 구현의 핵심이다. 배열 `T[]` 에서 지정된 요소 _elem_ 보다 큰 요소의 수를 계산하는 다음 메소드를 보면
 
 ```java
 public static <T> int countGreaterThan(T[] anArray, T elem) {
@@ -408,7 +408,7 @@ public static <T> int countGreaterThan(T[] anArray, T elem) {
 }
 ```
 
-이 메서드의 구현은 간단하지만 greater than 연산자 (&gt;)는 _short, int, double, long, float, byte_ 및 _char_ 같은 기본 유형에만 적용되므로 컴파일되지 않는다. &gt; 연산자를 사용하여 객체를 비교할 수 없기 때문에  _Comparable &lt;T&gt;_ 인터페이스로 경계가 타입 파라미터를 사용하면 된다.
+이 메서드의 구현은 간단하지만 greater than 연산자 (&gt;)는 _short, int, double, long, float, byte_ 및 _char_ 같은 기본 유형에만 적용되므로 컴파일되지 않는다. &gt; 연산자를 사용하여 객체를 비교할 수 없기 때문에 `Comparable<T>` 인터페이스로 경계가 타입 파라미터를 사용하면 된다.
 
 ```java
 public interface Comparable<T> {
@@ -465,23 +465,23 @@ public void boxTest(Box<Number> n) { /* ... */ }
 
 이건은 제네릭으로 프로그래밍 할 때 일반적으로 자주하는 오해이다. 하지만 이것은 반드시 알아야하는 중요한 컨셉이다.
 
-![](https://docs.oracle.com/javase/tutorial/figures/java/generics-subtypeRelationship.gif "diagram showing that Box&amp;lt;Integer&amp;gt; is not a subtype of Box&amp;lt;Number&amp;gt;")
+<img style="width: 400px" src="https://docs.oracle.com/javase/tutorial/figures/java/generics-subtypeRelationship.gif" />
 
-_Integer_ 는 _Number_ 의 서브타입 이지만, _Box&lt;Integer&gt;_ 는  _Box&lt;Number&gt;_ 의 서브타입이 아니다.
+`Integer` 는 `Number` 의 서브타입 이지만, `Box<Integer>` 는  `Box<Number>` 의 서브타입이 아니다.
 
-> **Note : **두 타입 A, B가 있을 때(예를 들면 _Number_ 와 _Integer_ ), _MyClass&lt;A&gt;_ 와 _MyClass&lt;B&gt;_ 는 A와 B가 연관 관계가 있더라도 아무런 관련이 없다. 두 클래스의 공통 부모는 _Object_ 뿐이다.
+> __Note__ : 두 타입 A, B가 있을 때(예를 들면 `Number` 와 `Integer` ), `MyClass<A>` 와 `MyClass<B>` 는 A와 B가 연관 관계가 있더라도 아무런 관련이 없다. 두 클래스의 공통 부모는 _Object_ 뿐이다.
 
 #### 제네릭 클래스와 하위 타입
 
-제네릭 클래스나 인터페이스를 확장하거나 구현해서 서브타입을 만들 수 있다. 어떤 클래스/인터페이스의 타입 파라미터와 다른 클래스/인터페이스의 타입 파라미터 간의 관계는 _extends_와 _implements _로 결정된다.
+제네릭 클래스나 인터페이스를 확장하거나 구현해서 서브타입을 만들 수 있다. 어떤 클래스/인터페이스의 타입 파라미터와 다른 클래스/인터페이스의 타입 파라미터 간의 관계는 `extends` 와 `implements` 로 결정된다.
 
-_Collection _클래스를 예로 들자면 _ArrayList&lt;E&gt;_는 _List &lt;E&gt;_를 구현하고 _List&lt;E&gt;_는 _Collection&lt;E&gt;_를 확장한다. 따라서 _ArrayList&lt;String&gt;_은 _List&lt;String&gt;_의 하위 유형이며 _Collection&lt;String&gt;_의 하위 유형이다. 타입 인자를 변경하지 않는 한 유형간에 하위 타입관계가 유지된다.
+`Collection` 클래스를 예로 들자면 `ArrayList<E>` 는 `List<E>` 를 구현하고 `List<E>`는 `Collection<E>` 를 확장한다. 따라서 `ArrayList<String>`은 `List<String>` 의 하위 유형이며 `Collection<String>` 의 하위 유형이다. 타입 인자를 변경하지 않는 한 유형간에 하위 타입관계가 유지된다.
 
-![](https://docs.oracle.com/javase/tutorial/figures/java/generics-sampleHierarchy.gif "diagram showing a sample collections hierarchy: ArrayList&amp;lt;String&amp;gt; is a subtype of List&amp;lt;String&amp;gt;, which is a subtype of Collection&amp;lt;String&amp;gt;.")
+<img style="width: 200px;" src="https://docs.oracle.com/javase/tutorial/figures/java/generics-sampleHierarchy.gif"/>
 
-Collections 계층 구조의 예
+<p align="center">Collections 계층 구조의 예</p>
 
-새로운 List 인터페이스를 구현하고 제네릭 타입 P를 추가적으로 선언된 _PayloadList _클래스를 작성하면 아래와 같이 될 것이다.
+새로운 List 인터페이스를 구현하고 제네릭 타입 `P`를 추가적으로 선언된 `PayloadList` 클래스를 작성하면 아래와 같이 될 것이다.
 
 ```java
 interface PayloadList<E,P> extends List<E> {
@@ -490,15 +490,15 @@ interface PayloadList<E,P> extends List<E> {
 }
 ```
 
-아래 선언된 목록은_ List&lt;String&gt;_의 하위타입이 될 수 있는 _PayloadList _선언부이다.
+아래 선언된 목록은 `List<String>` 의 하위타입이 될 수 있는 `PayloadList` 선언부이다.
 
-* PayloadList&lt;String, String&gt;
-* PayloadList&lt;String, Integer&gt;
-* PayloadList&lt;String, Exception&gt;
+* PayloadList<String, String>
+* PayloadList<String, Integer>
+* PayloadList<String, Exception>
 
 ![](https://docs.oracle.com/javase/tutorial/figures/java/generics-payloadListHierarchy.gif "diagram showing an example PayLoadList hierarchy: PayloadList&amp;lt;String, String&amp;gt; is a subtype of List&amp;lt;String&amp;gt;, which is a subtype of Collection&amp;lt;String&amp;gt;. At the same level of PayloadList&amp;lt;String,String&amp;gt; is PayloadList&amp;lt;String, Integer&amp;gt; and PayloadList&amp;lt;String, Exceptions&amp;gt;.")
 
-PayloadList 계층 구조의 예
+<p align="center">PayloadList 계층 구조의 예</p>
 
 ## 타입 추론
 
@@ -552,13 +552,13 @@ Box #1 contains [20]
 Box #2 contains [30]
 ```
 
-제네릭 메소드 _addBox_는 타입 파리미터 _U_를 정의했다. 일반적으로 자바 컴파일러는 제네릭 메소드 호출의 타입 파라미터를 추론할 수 있다. 따라서 대부분의 경우는 지정할 필요가 없다. _addBox_라는 제네릭 메소드를 호출할 때 타입 파라미터의 타입 힌트(type witness)를 아래와 같이 줄 수 있다.
+제네릭 메소드 `addBox`는 타입 파라미터 `U`를 정의했다. 일반적으로 자바 컴파일러는 제네릭 메소드 호출의 타입 파라미터를 추론할 수 있다. 따라서 대부분의 경우는 지정할 필요가 없다. `addBox`라는 제네릭 메소드를 호출할 때 타입 파라미터의 타입 힌트(type witness)를 아래와 같이 줄 수 있다.
 
 ```java
 BoxDemo.<Integer>addBox(Integer.valueOf(10), listOfIntegerBoxes);
 ```
 
-타입 힌트를 생략하면 자바 컴파일러는 자동적으로 메소드의 인자를 보고 타입 파라미터가 _Integer_라고 추론한다.
+타입 힌트를 생략하면 자바 컴파일러는 자동적으로 메소드의 인자를 보고 타입 파라미터가 `Integer`라고 추론한다.
 
 #### 타입 추론과 제네릭 클래스의 객체화
 
@@ -568,13 +568,13 @@ BoxDemo.<Integer>addBox(Integer.valueOf(10), listOfIntegerBoxes);
 Map<String, List<String>> myMap = new HashMap<String, List<String>>();
 ```
 
-생성자의 파라미터 타입(paramterized type)를 빈 타입 파리미터로 바꿀 수 있다.
+생성자의 파라미터 타입(paramterized type)를 빈 타입 파라미터로 바꿀 수 있다.
 
 ```java
 Map<String, List<String>> myMap = new HashMap<>();
 ```
 
-제네릭 클래스를 인스턴스화 할 때 타입 추론을 사용하려면 다이아몬드를 꼭 써야한다. 다음 예제에서는 _HashMap()_ 생성자가 _Map &lt;String, List &lt;String &gt;&gt; _형식이 아닌 _HashMap _원시 타입(raw type)을 반환하기 때문에 컴파일러에서 확인되지 않은 변환 경고를 생성한다.
+제네릭 클래스를 인스턴스화 할 때 타입 추론을 사용하려면 다이아몬드를 꼭 써야한다. 다음 예제에서는 `HashMap()` 생성자가 `Map<String, List<String>>` 형식이 아닌 `HashMap` 원시 타입(raw type)을 반환하기 때문에 컴파일러에서 확인되지 않은 변환 경고를 생성한다.
 
 ```java
 Map<String, List<String>> myMap = new HashMap(); // unchecked conversion warning
@@ -598,7 +598,7 @@ MyClass 클래스의 객체화 부분을 보면
 new MyClass<Integer>("")
 ```
 
-이 구문은 파라미터 타입(parameterized type)인 _MyClass&lt;Integer&gt;_의 객체를 만든다. 여기서 제네릭 클래스인 _MyClass&lt;X&gt;_ 의 형식 파라미터 _X_에 대하여 _Integer _타입이라고 명시하고 있다. 형식 타입 파라미터 _T_를 가지고 있는 생성자를 보면 컴파일러가 형식 타입 파라미터 _T _를 _String _타입이라고 유추하는데 그 이유는 생성자의 실제 파라미터(actual parameter)가  " " 로 _String_ 객체이기 때문이다.
+이 구문은 파라미터 타입(parameterized type)인 `MyClass<Integer>` 의 객체를 만든다. 여기서 제네릭 클래스인 `MyClass<X>` 의 형식 파라미터 `X`에 대하여 `Integer` 타입이라고 명시하고 있다. 형식 타입 파라미터 `T`를 가지고 있는 생성자를 보면 컴파일러가 형식 타입 파라미터 `T`를 `String` 타입이라고 유추하는데 그 이유는 생성자의 실제 파라미터(actual parameter)가  " " 로 `String` 객체이기 때문이다.
 
 #### 대상 타입(Target Types)
 
