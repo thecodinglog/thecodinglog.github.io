@@ -8,7 +8,7 @@ tags:	spring security
 ---
 
 ## 목적
-내가 원하는 인증과 권한 모델을 스프링 시큐리티와 결합하여 프레임워크에서 제공하는 보안 기능을 최대한 활용하고자 한다. 구체적인 인증과 권한 모델의 Database table 설계는 차후 진행하고 먼저 레퍼런스를 참고하면서 스프링 시큐리티는 어떤 구조로 되어 있고 내가 커스터마이즈 할 수 있는 부분이 어디인지 또 어떻게 해야하는지 공부하면서 기록해보고자 한다.
+내가 원하는 인증과 권한 모델을 스프링 시큐리티와 결합하여 프레임워크에서 제공하는 보안 기능을 최대한 활용하고자 한다. 구체적인 인증과 권한 모델의 Database table 설계는 차후 진행하고 먼저 레퍼런스를 참고하면서 스프링 시큐리티는 어떤 구조로 되어 있고 내가 커스터마이즈 할 수 있는 부분이 어디인지 또 어떻게 해야 하는지 공부하면서 기록해보고자 한다.
 
 ## 스프링 시큐리티 개요
 스프링 시큐리티가 목표로 하는 주요 영역은 **인증**과 **권한 부여**이고 이를 위해 다양한 인증 모델을 지원한다.
@@ -84,13 +84,13 @@ public class WebSecurityConfig implements WebMvcConfigurer {
 >`WebMvcConfigurer` 는 자동 구성된 스프링 MVC에 `Formatter`, `MessageConverter` 등을 추가 등록할 수 있다. `WebMvcRegistrations`는 `RequestMappingHandlerMapping`, `RequestMappingHandlerAdapter`와 `ExceptionHandlerExceptionResolver`를 재정의할 때 사용한다.
 
 ### 실행
-지금까지 설정으로 스프링부트앱을 실행시키고 localhost:8080 으로 접속하면 로그인 폼이 뜬다. 이 몇가지 안되는 설정으로 모든 URL에 대해 인증절차를 거치게 만들고 login 폼도 만들어 주고 사용자도 만들어 주고 CSRF 공격도 막아주고 등등 많은 일들을 한다.
+지금까지 설정으로 스프링부트앱을 실행시키고 localhost:8080 으로 접속하면 로그인 폼이 뜬다. 이 몇 가지 안되는 설정으로 모든 URL에 대해 인증절차를 거치게 만들고 login 폼도 만들어 주고 사용자도 만들어 주고 CSRF 공격도 막아주고 등등 많은 일을 한다.
 
 
 ![](/assets/spring-security/result1.png)
 
 
-다음은 springSecurityFilterChain 을 등록시키는 것인데 우리는 spring을 쓰고 있으니 어딘가에 WebApplicationInitializer 가 분명있다. 여기에 SpringSecurity를 ApplicationContext에 등록시켜야 한다는데 무슨 말인지 모르겠네... 일단 넘어가는 걸로
+다음은 springSecurityFilterChain 을 등록시키는 것인데 우리는 spring을 쓰고 있으니 어딘가에 WebApplicationInitializer 가 분명 있다. 여기에 SpringSecurity를 ApplicationContext에 등록시켜야 한다는데 무슨 말인지 모르겠네... 일단 넘어가는 거로
 
 ### 결과 분석
 
@@ -250,7 +250,7 @@ login.jsp는 레퍼런스를 복붙했다.
 
 레퍼런스 코드에는 jstl tag 라이브러리를 쓰고 있는데 namespace 가 추가되어 있지 않아 추가했고 캐릭터셋도 추가했다.
 
-버튼을 누르면 form이 submit 되는데 post 방식으로 될것이고 action은 /login 이며 CSRF 토큰을 전송 내용에 포함시켰다. jstl 문법은 [여기](http://hunit.tistory.com/203) 에 간략하게 설명이 잘 되어 있다.
+버튼을 누르면 form이 submit 되는데 post 방식으로 될 것이고 action은 /login 이며 CSRF 토큰을 전송 내용에 포함시켰다. jstl 문법은 [여기](http://hunit.tistory.com/203)에 간략하게 설명이 잘 되어 있다.
 
 마지막으로 prefix, suffix 프로퍼티를 설정하자.
 _application.properties_ 에
@@ -260,7 +260,7 @@ spring.mvc.view.prefix=/WEB-INF/views/
 spring.mvc.view.suffix=.jsp
 ```
 
-만약 jsp가 아니고 Thymeleaf나 Handlerbar 같이 다른 view template 엔진을 쓰게 되면 이런 속성없이 templates 디렉토리에 넣어주면 되는데 jsp는 이제 한물가서 그런건지 이렇게 힘들게 해야 한다. 그럼에도 불구하고 레퍼런스는 jsp 이네...
+만약 jsp가 아니고 Thymeleaf나 Handlerbar 같이 다른 view template 엔진을 쓰게 되면 이런 속성 없이 templates 디렉터리에 넣어주면 되는데 jsp는 이제 한물가서 그런 것인지 이렇게 힘들게 해야 한다. 그럼에도 불구하고 레퍼런스는 jsp 이네...
 
 이제 app을 실행해서 localhost:8080/home 으로 접속하면 인증되지 않았기 때문에 login 페이지로 리다이렉션 되고
 
@@ -272,7 +272,7 @@ WebSecurityConfig 에서 추가했던 유저와 비번을 입력해서 로그인
 ![](/assets/spring-security/home.png)
 
 
-접근권한 설정할 때 http.authorizeRequests() 밑으로 여러 개 matcher를 붙일 수 있다. 레퍼런스와 똑같이 한번 변경해봤다.
+접근 권한 설정할 때 http.authorizeRequests() 밑으로 여러 개 matcher를 붙일 수 있다. 레퍼런스와 똑같이 한번 변경해봤다.
 
 ```java
 @Override
@@ -286,7 +286,6 @@ protected void configure(HttpSecurity http) throws Exception {
   .formLogin()
     .loginPage("/login")
     .permitAll();
-
 }
 ```
 
