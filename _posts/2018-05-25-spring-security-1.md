@@ -72,12 +72,12 @@ package cothe.springsecurityreference.config;
 
 @EnableWebSecurity
 public class WebSecurityConfig implements WebMvcConfigurer {
-    @Bean
-    public UserDetailsService userDetailsService() throws Exception {
-        InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
-        manager.createUser(User.withDefaultPasswordEncoder().username("user").password("password").roles("USER").build());
-        return manager;
-    }
+  @Bean
+  public UserDetailsService userDetailsService() throws Exception {
+    InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
+    manager.createUser(User.withDefaultPasswordEncoder().username("user").password("password").roles("USER").build());
+    return manager;
+  }
 }
 ```
 
@@ -176,7 +176,7 @@ public class WebController {
 이제 view를 추가해야하는데 레퍼런스에서 jsp를 쓰고 있기때문에 똑같이 한번 넣어보자.
 springboot에서 jsp를 쓰려면 관련 라이브러리를 포함시키고 /WEB-INF 디렉토리를 만들어야 한다.
 
-먼저 build.gradle 파일에 의존성을 추가하고
+먼저 _build.gradle_ 파일에 의존성을 추가하고
 
 ```groovy
 compile('javax.servlet:jstl')
@@ -191,7 +191,7 @@ view를 저장할 디렉토리를 만들자.
 
 이렇게 main 디렉토리에 webapp 이하 디렉토리를 만들고 views 디렉토리 밑에 home.jsp, login.jsp를 추가시켰다.
 
-home.jsp는 단순하게
+_home.jsp_ 는 단순하게
 
 ```html
 <!DOCTYPE html>
@@ -206,7 +206,7 @@ home.jsp는 단순하게
 </html>
 ```
 
-login.jsp는 레퍼런스를 복붙했다.
+_login.jsp_ 는 레퍼런스를 복붙했다.
 
 ```html
 <%@ page contentType="text/html; charset=UTF-8" %>
@@ -264,9 +264,11 @@ spring.mvc.view.suffix=.jsp
 
 이제 app을 실행해서 localhost:8080/home 으로 접속하면 인증되지 않았기 때문에 login 페이지로 리다이렉션 되고
 
+
+
 ![](/assets/spring-security/login-page.png)
 
-WebSecurityConfig 에서 추가했던 유저와 비번을 입력해서 로그인한다.
+`WebSecurityConfig` 에서 추가했던 유저와 비번을 입력해서 로그인한다.
 로그인을 하면 처음에 요청했던 home 화면이 뜬다.
 
 ![](/assets/spring-security/home.png)
@@ -291,7 +293,7 @@ protected void configure(HttpSecurity http) throws Exception {
 
 ### 로그아웃 구현
 
-로그인을 했으니 이제 로그아웃을 할 차례이다.  `WebSecurityConfigurerAdapter`를 쓰면 기본적으로 로그아웃 기능을 제공한다. _/logout_으로 접근하면 로그아웃 처리를 하는데 로그아웃을 하게 되면
+로그인을 했으니 이제 로그아웃을 할 차례이다.  `WebSecurityConfigurerAdapter`를 쓰면 기본적으로 로그아웃 기능을 제공한다. _/logout_ 으로 접근하면 로그아웃 처리를 하는데 로그아웃을 하게 되면
 * HTTP Session에서 없애버리고
 * RememberMe 설정이 되어 있으면 지우고
 * SecurityContextHolder 도 지우고
@@ -329,15 +331,15 @@ protected void configure(HttpSecurity http) throws Exception {
 }
 ```
 
-logout 설정을 해주니 잘 된다. 그럼 디폴트는 동작 안하는 것인가?
+이렇게 logout 설정을 해주니 잘 된다. 그럼 디폴트는 동작 안하는 것인가?
 
 레퍼런스를 잘 다시 잘 읽어보니 이런 구문이 있네
 
->2. The URL that triggers log out to occur (default is /logout). If CSRF protection is enabled (default), then the request must also be a POST. For more information, please consult the JavaDoc.
+>2. The URL that triggers log out to occur (default is /logout). **If CSRF protection is enabled** (default), then the request must also be a **POST**. For more information, please consult the JavaDoc.
 
 아하.. 기본값으로 CSRF 보호가 활성화되어 있는데, CSRF가 활성화되어 있으면 요청은 Post로 받아야 한다는 말이군.
 
-그럼 Post로 로그아웃 요청을 보낼 수 있도록 _home.jsp_를 수정하자.
+그럼 Post로 로그아웃 요청을 보낼 수 있도록 _home.jsp_ 를 수정하자.
 
 ```html
 <%@ page contentType="text/html; charset=UTF-8" %>
@@ -345,18 +347,18 @@ logout 설정을 해주니 잘 된다. 그럼 디폴트는 동작 안하는 것�
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <meta charset="UTF-8">
+  <title>Title</title>
 </head>
 <body>
-<h1>home</h1>
-<c:url value="/logout" var="logoutUrl"/>
-<form action="${logoutUrl}" method="post">
-    <input type="hidden"
-           name="${_csrf.parameterName}"
-           value="${_csrf.token}"/>
-    <button type="submit" class="btn">Log out</button>
-</form>
+  <h1>home</h1>
+  <c:url value="/logout" var="logoutUrl"/>
+  <form action="${logoutUrl}" method="post">
+  <input type="hidden"
+         name="${_csrf.parameterName}"
+         value="${_csrf.token}"/>
+  <button type="submit" class="btn">Log out</button>
+  </form>
 </body>
 </html>
 ```
@@ -406,4 +408,4 @@ home log out 버튼이 달란 화면이 뜨고, 버튼을 누르면
 
 레퍼런스 똑바로 안읽었으면 삽질 할 뻔했다.
 
-뒤로 좀 땡겨서 읽어보니까(19.5.3 Logging Out) Get 방식으로 로그아웃 할 수 있게 하는 방법이 처음 설정했던 방법인데 비추천하는 방식이라고 한다.
+뒤로 좀 땡겨서 읽어보니까([19.5.3 Logging Out](https://docs.spring.io/spring-security/site/docs/5.0.5.RELEASE/reference/htmlsingle/#csrf-logout)) Get 방식으로 로그아웃 할 수 있게 하는 방법이 처음 설정했던 방법인데 비추천하는 방식이라고 한다.
