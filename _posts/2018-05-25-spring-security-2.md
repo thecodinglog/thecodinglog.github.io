@@ -305,10 +305,24 @@ java.lang.IllegalArgumentException: There is no PasswordEncoder mapped for the i
 
 ```
 
-`PasswordEncoder` 패스워드 인코더가 없다고 뜬다.
+`PasswordEncoder` 패스워드 인코더가 없다고 뜬다. 해결 방법을 알아보기 전에 전반적인 인증 구조를 먼저 살펴보자.
 
+웹 요청이 오면 필터에서 인증을 시도하는데 설정한 `AuthenticationManager` 구현체를 가져와서 `authenticate()` 메소드를 호출을 하는것으로 처리한다.
 
-인코딩이 없는 것을 일단 등록
+예제에서는 `UsernamePasswordAuthenticationFilter` 를 사용하는데 이건 http 설정에서
+ `formLogin()`을 설정하면 `org.springframework.security.config.annotation.web.configurers.FormLoginConfigurer` 에서 `UsernamePasswordAuthenticationFilter` 를 사용하여 초기화 한다.
+
+`AuthenticationManager`는 `AuthenticationManagerBuilder`의 `jdbcAuthentication()`을 호출하면서 설정된다. 메소드에서 `JdbcUserDetailsManager` 를 생성하여 설정하는데 이 Manager에는 database를 조회화고 업데이트하는 쿼리가 저장되어 있다.
+
+`UserDetailsManager` 인터페이스는 새 user를 만들고 기존 user를 업데이트 할 수 있는 메소드를 `UserDetailsService` 인터페이스에서 확장한 것이다. `UserDetailsService는` 사용자 정보를 가져오는 핵심 Interface이다.
+
+`AuthenticationManager`는 스프링시큐리티의 인증을 위한 핵심 인터페이스인데 `authenticate()` 메소드 하나를 가지고 있다. 이것의 구현체 중 `ProviderManager`가 대표적인데 이 클래스는 내부적으로 `AuthenticationProvider` Interface를 리스트로 유지하고 있고 이 Interface의 대표적인 구현체가 `DaoAuthenticationProvider`이다. `AuthenticationProvider` Interface는 `authenticate()` 와 `supports()` 메소드를 가지고 있다.
+
+`DaoAuthenticationProvider`는 `JdbcUserDetailsManager`를 통해 DB의 사용자 정보를 가지고 와서 인증처리를 한다.
+
+Configure에 별도로 Bean을 등록하지 않으면 `DelegatingPasswordEncoder`가 기본 인코더로 사용된다. 이 인코더는 내부에 다른 PasswordEncoder를 가지고 있을 수 있는 필드가 있고, `DaoAuthenticationProvider`가 생성되면서 `DelegatingPasswordEncoder`에 적용 가능한 `Encoder`들을 등록한다. 어떤 Encoder를 쓸지는 database에 저장된 password의 prefix {Encoder명} 를 보고 결정한다. 기본값은 _bcrypt_ 이다.
+
+DB에 인코딩된 값을 넣기가 힘드니까 인코딩 없이 인증을 하도록 `NoOpPasswordEncoder`를 등록하자.
 
 ```java
 cothe.springsecurityreference.config.WebSecurityConfig
@@ -318,3 +332,10 @@ cothe.springsecurityreference.config.WebSecurityConfig
         return NoOpPasswordEncoder.getInstance();
     }
 ```
+
+실행해보면
+로그인 화면이 뜨고
+![](/assets/spring-security/2018-05-25-spring-security-2-071ab544.png)
+
+로그인 하면 정상적으로 처리 된다.
+![](/assets/spring-security/2018-05-25-spring-security-2-2da8253b.png)
