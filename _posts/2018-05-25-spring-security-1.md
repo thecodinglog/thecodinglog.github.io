@@ -4,7 +4,7 @@ title: Spring-Security Reference 따라하기 1
 date:   2018-05-25 17:20:00 +0900
 author: Jeongjin Kim
 categories: Spring
-tags:	spring security
+tags:	spring security spring-security 스프링 스프링시큐리티 보안 시큐리티 reference 레퍼런스 따라하기
 ---
 
 ## 목적

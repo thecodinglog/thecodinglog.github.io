@@ -1,14 +1,15 @@
 ---
 layout: post
-title: Spring-Security Reference 따라하기 2
+title: Spring Security Reference 따라하기 2
 date:   2018-05-25 17:30:00 +0900
 author: Jeongjin Kim
 categories: Spring
-tags:	spring security
+tags:	spring security spring-security 스프링 스프링시큐리티 보안 시큐리티 reference 레퍼런스 따라하기
 ---
 
 계속해서 레퍼런스를 따라해보자. OAuth 는 일단 넘어가고 [5.8 Authentication](https://docs.spring.io/spring-security/site/docs/5.0.5.RELEASE/reference/htmlsingle/#jc-authentication) 부터 다시 보자.
 
+### Spring-security Sample 실행 해 보기
 앞선 예제에서 인메모리 방식으로 사용자를 등록했다. 이걸 JDBC 로 사용자를 가져오는 방식으로 바꿔보자.
 레퍼런스에서는
 [여기](https://github.com/spring-projects/spring-security/tree/master/samples/javaconfig/jdbc)에 샘플을 제공한다고 되어 있어 있는데 실행해보려면 어차피 전체 프로젝트가 필요하니까 스프링시큐리티 프로젝트를 통째로 clone받자.
@@ -81,8 +82,9 @@ public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception 
 }
 ```
 
-이 코드를  
-`package cothe.springsecurityreference.config;`
+### JDBC 인증방법으로 변경하기
+앞선 코드에서 jdbc 설정부분을
+`cothe.springsecurityreference.config` 패키지의
 `WebSecurityConfig` 클래스에 넣으면 dataSource를 Autowired 할 수 없다고 뜬다.
 
 왜 그렇지 또 찾아 봐야 겠다.
@@ -307,6 +309,8 @@ java.lang.IllegalArgumentException: There is no PasswordEncoder mapped for the i
 
 `PasswordEncoder` 패스워드 인코더가 없다고 뜬다. 해결 방법을 알아보기 전에 전반적인 인증 구조를 먼저 살펴보자.
 
+### 스프링 시큐리티 아키텍처
+
 웹 요청이 오면 필터에서 `AuthenticationManager` 구현체를 가져와서 `authenticate()` 메소드를 호출을 하는것으로 인증을 시도한다.
 
 예제에서는 `UsernamePasswordAuthenticationFilter`를 사용하는데 이건 http 설정에서
@@ -322,6 +326,8 @@ java.lang.IllegalArgumentException: There is no PasswordEncoder mapped for the i
 
 
 Configure에 별도로 Bean을 등록하지 않으면 `DelegatingPasswordEncoder`가 기본 인코더로 사용된다. 이 인코더는 내부에 다른 PasswordEncoder를 가지고 있을 수 있는 필드가 있고, `DaoAuthenticationProvider`가 생성되면서 `DelegatingPasswordEncoder`에 적용 가능한 `Encoder`들을 등록한다. 어떤 Encoder를 쓸지는 database에 저장된 password의 prefix {Encoder명} 를 보고 결정한다. 기본값은 _bcrypt_ 이다.
+
+### 패스워드 인코더 설정
 
 DB에 인코딩된 값을 넣기가 힘드니까 인코딩 없이 인증을 하도록 `NoOpPasswordEncoder`를 등록하자.
 
