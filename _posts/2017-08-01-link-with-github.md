@@ -1,6 +1,8 @@
 ---
 layout: post
 title: 로컬pc에서 github에 push 할 수 있게 만들기(SSH)
+subtitle: github에 ssh로 push 하기
+description: github에 ssh로 push 하기
 date:   2017-08-01 08:43:59
 author: Jeongjin Kim
 categories: git

@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Spring-Security Reference 따라하기 1
+subtitle: Spring-boot와 Spring-security로 로그인 하기
+description: Spring-boot와 Spring-security로 로그인 하기
 date:   2018-05-25 17:20:00 +0900
 author: Jeongjin Kim
 categories: Spring

@@ -1,6 +1,8 @@
 ---
 layout: post
 title: git project를 github로 공개하기
+subtitle: github에 처음으로 올리기
+description: github에 처음으로 올리기
 date:   2017-08-04 08:43:59
 author: Jeongjin Kim
 categories: git

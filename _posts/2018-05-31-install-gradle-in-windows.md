@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Windows에 Gradle 설치하기
+subtitle: Windows에 수작업으로 Gradle 설치하기
+description: Windows에 수작업으로 Gradle 설치하기
 date:   2018-05-30 17:30:00 +0900
 author: Jeongjin Kim
 categories: Gradle
@@ -27,7 +29,7 @@ Gradle은 Groovy Library를 포함하여 배포되기 때문에 특별히 따로
 
 `C:\Gradle` 디렉토리를 하나 만든다
 
-`C:\Gradle` 디렉토리에 다운받은 압축파일을 푼다. 
+`C:\Gradle` 디렉토리에 다운받은 압축파일을 푼다.
 
 그러면 `C:\Gradle\gradle-4.7` 밑에 bin, docs, init.d 등 디렉토리가 있다.
 

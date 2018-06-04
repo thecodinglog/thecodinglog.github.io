@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Spring MVC 경로 설정
+subtitle: Spring MVC 경로설정시 생기는 문제점에 대한 해결
+description: Spring MVC 경로설정시 생기는 문제점에 대한 해결
 date:   2017-07-31 08:43:59
 author: Jeongjin Kim
 categories: Spring

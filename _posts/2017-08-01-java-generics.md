@@ -1,6 +1,8 @@
 ---
 layout: post
 title: java 제네릭스
+subtitle: java generics를 알아보자
+description: java generics (자바 제네릭스) 튜토리얼 번역
 date:   2017-08-01 08:43:59
 author: Jeongjin Kim
 categories: JAVA
