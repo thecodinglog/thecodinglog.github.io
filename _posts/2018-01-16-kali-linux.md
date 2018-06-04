@@ -2,7 +2,7 @@
 layout: post
 title: kali linux 한글 폰트 설치
 subtitle: kali linux 한글 폰트 설치시 미러사이트 변경하기
-description: kali linux 한글 폰트 설치시 미러사이트 변경하기
+description: apt-get를 이용하여 kali linux 한글 폰트 설치시 미러사이트 변경하기
 date:   2018-01-16 08:43:59
 author: Jeongjin Kim
 categories: Security
