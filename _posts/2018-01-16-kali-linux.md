@@ -4,7 +4,7 @@ title: kali linux 한글 폰트 설치
 date:   2018-01-16 08:43:59
 author: Jeongjin Kim
 categories: Security
-tags:	kali linux
+tags:	kali linux 칼리리눅스 미러사이트 hangul
 ---
 Kali linux에 한글폰트를 apt-get를 이용하여 설치할 수 있다.
 
