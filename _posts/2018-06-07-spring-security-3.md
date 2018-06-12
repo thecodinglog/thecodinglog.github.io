@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Spring Security Reference 따라하기 3
+description: Security Namespace Configuration로 DB 기반 로그인
 date:   2018-06-07 17:30:00 +0900
 author: Jeongjin Kim
 categories: Spring Security
@@ -533,3 +534,9 @@ inMemory 를 활용했을 때와 마찬가지로 인코딩을 사용하지 않�
 ![](/assets/spring-security/2018-05-30-spring-security-3-8c58b9fe.png)
 
 이렇게 spring-boot 와 Namespace Configuration를 쓰는 방법으로 로그인 로그아웃 기능을 구현하였다.
+
+### Default AccessDecisionManager
+
+_namespace configuration_ 을 사용하면 `AccessDecisionManager` 의 디폴트 인스턴스가 자동으로 등록된다. 이게 메소드 호출이나 intercept-url에 기반한 웹 URL 액세스, protect-pointcut 등에 대하여 접근 제어를 한다.
+
+기본 전략은 `RoleVoter` 및 `AuthenticatedVoter`와 함께 `AffirmativeBased` `AccessDecisionManager`를 사용하는 것이다.
