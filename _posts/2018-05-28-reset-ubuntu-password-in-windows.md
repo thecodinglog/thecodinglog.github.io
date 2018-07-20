@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 윈도우10에서 사용자 패스워드 리셋하기
+title: Windows10 WSL에서 사용자 패스워드 초기화하기
 subtitle: Windows Subsystem for Linux 에서 user password 초기화하기
 description: Windows Subsystem for Linux 에서 user password 초기화하기
 date:   2018-05-30 17:30:00 +0900
