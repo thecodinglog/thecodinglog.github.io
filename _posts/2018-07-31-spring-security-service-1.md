@@ -55,7 +55,8 @@ SQL에 JPA, MySql, JDBC를 선택한다.
 
 ### 1) Entity Class 만들기
 
-User Class 는 사용자의 기본 정보(id, password, 활성여부)을 관리할 클래스이다. `@Entity` 애노테이션으로 이 클래가 엔티티 클래스 임을 표시한다. `@Getter`, `@NoArgsConstructor`, `@AllArgsConstructor`, `@Builder` lombok 애노테이션으로 이 클래스에 대한 접근, 생성에 관한설정을 한다. lombok에 관한사항은 [여기](https://projectlombok.org/features/all)에서 자세히 알아보기 바란다.
+User Class 는 사용자의 기본 정보(id, password, 활성여부)을 관리할 클래스이다. `@Entity` 애노테이션으로 이 클래가 엔티티 클래스 임을 표시한다. 특별히 엔티티와 매핑할 테이블을 지정하고자 할 때는 `@Table` 애노테이션의 `name` 속성을 지정하면 된다.  
+Entity class는 기본 생성자가 필수이다. 만약 필드를 파라미터로 받는 생성자가 하나라도 있으면 자바에서는 자동으로 기본생성자를 만들지 않는다. 이를 간단히 해결하기 위해 lombok 애노테이션 `@NoArgsConstructor`, `@AllArgsConstructor`들을 붙였고 추가적으로 `@Getter`, `@Builder` 애노테이션으로 클래스에 대한 Getter와 객체생성을 명확하게 하기 위한 빌더를 추가하였다. lombok에 관한사항은 [여기](https://projectlombok.org/features/all)에서 자세히 알아보기 바란다.
 
 `Users.java`
 

@@ -40,3 +40,18 @@ BaseEntity 를 쓰면 상속받아서 코드상 중복을 없앨 수 있다.
 - JPA 스펙에 정의된 모든 매핑 감사
 - 엔티티의 변경 이력을 자동으로 관리
 
+```java
+@Entity
+@Audited //추가
+public class Member(){
+    @Id @GeneratedValue
+    private Long id;
+    private String name;
+
+    @CreatedDate
+    private LocalDateTime createdDate;
+    ....
+}
+```
+
+String Data Envers
