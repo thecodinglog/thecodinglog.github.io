@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Spring Security로 Security 서비스 구축하기 1
-description: Spring Security로 인증
+description: Spring Security로 인증 스프링 시큐리티 스프링시큐리티 authentication
 date:   2018-07-31 17:30:00 +0900
 author: Jeongjin Kim
 categories: Spring Security

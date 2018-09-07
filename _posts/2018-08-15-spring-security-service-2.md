@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Spring Security로 Security 서비스 구축하기 2
-description: Spring Security voter 구현하기
+description: Spring Security voter 구현하기 스프링 시큐리티 스프링시큐리티 access
 date:   2018-08-15 17:30:00 +0900
 author: Jeongjin Kim
 categories: Spring Security

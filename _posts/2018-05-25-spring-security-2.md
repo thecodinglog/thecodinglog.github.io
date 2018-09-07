@@ -2,7 +2,7 @@
 layout: post
 title: Spring Security Reference 따라하기 2
 subtitle: Spring-boot와 Spring-security로 DB 기반 로그인
-description: Spring-boot와 Spring-security로 DB 기반 로그인
+description: jdbc db Spring-boot Spring-security 로그인 login Spring Security 스프링시큐리티 스프링 시큐리티 스프링부트
 date:   2018-05-25 17:30:00 +0900
 author: Jeongjin Kim
 categories: Spring Security

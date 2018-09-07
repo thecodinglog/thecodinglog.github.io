@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Spring Security Reference 따라하기 4
-description: Security security reference 번역
+description: reference 번역 Spring-security Spring Security 스프링시큐리티 스프링 시큐리티
 date:   2018-06-12 13:00:00 +0900
 author: Jeongjin Kim
 categories: Spring Security
