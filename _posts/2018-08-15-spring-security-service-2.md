@@ -530,3 +530,12 @@ public class MockRoleProvider implements RoleProvider {
 
 ### 테스트 실행 결과
 ![](/assets/2018-07-31-spring-security-service-2/2018-07-31-spring-security-service-2_161916.png)
+
+----
+# 연관된 포스트
+
+[Spring Security로 Security 서비스 구축하기 4](/spring/security/2018/09/12/spring-security-service-4.html)
+
+[Spring Security로 Security 서비스 구축하기 3](/spring/security/2018/09/06/spring-security-service-3.html)
+
+[Spring Security로 Security 서비스 구축하기 1](/spring/security/2018/07/31/spring-security-service-1.html)

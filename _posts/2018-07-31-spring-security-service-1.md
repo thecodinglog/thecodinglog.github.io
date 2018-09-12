@@ -498,3 +498,13 @@ public class AuthenticateTest {
 ![](/assets/2018-07-31-spring-security-service/2018-07-31-spring-security-service_181430.png)
 
 다음 장에는 권한체크를 할 수 있도록 User 오브젝트에 Role을 넣는 것부터 시작할 것이다.
+
+
+----
+# 연관된 포스트
+
+[Spring Security로 Security 서비스 구축하기 4](/spring/security/2018/09/12/spring-security-service-4.html)
+
+[Spring Security로 Security 서비스 구축하기 3](/spring/security/2018/09/06/spring-security-service-3.html)
+
+[Spring Security로 Security 서비스 구축하기 2](/spring/security/2018/08/15/spring-security-service-2.html)

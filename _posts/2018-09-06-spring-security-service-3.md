@@ -965,3 +965,11 @@ public class DenialFirstServiceVoterTest {
 지금까지 `ViewVoter`와 `ServiceVoter`를 대략 완성했다. 부족한 부분은 Role 이 계층적인 구조로 되어 있지만, 특별히 그 부분에 대해서 구현하지 않았다. 부모의 Role과 자식 Role 이 상충할 때 어떻게 처리할지 정책을 정하고 이에 맞게 구현해야 한다. 특정 조건에 따라서 정책을 다르게 써야 할 수도 있다. 이런 조건을 만족 할 수 있도록 다음 포스트부터 진행하겠다.
 
 
+----
+# 연관된 포스트
+
+[Spring Security로 Security 서비스 구축하기 4](/spring/security/2018/09/12/spring-security-service-4.html)
+
+[Spring Security로 Security 서비스 구축하기 2](/spring/security/2018/08/15/spring-security-service-2.html)
+
+[Spring Security로 Security 서비스 구축하기 1](/spring/security/2018/07/31/spring-security-service-1.html)
