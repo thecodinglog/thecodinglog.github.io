@@ -4,7 +4,7 @@ title: gradle upgrade 하기
 description: gradle upgrade 하기
 date:   2018-11-20 11:44:00 +0900
 author: Jeongjin Kim
-categories: gradle
+categories: Gradle
 tags:	gradle upgrade update
 ---
 
