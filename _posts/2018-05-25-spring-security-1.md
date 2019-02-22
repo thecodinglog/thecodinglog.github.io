@@ -411,3 +411,13 @@ home log out 버튼이 달란 화면이 뜨고, 버튼을 누르면
 레퍼런스 똑바로 안읽었으면 삽질 할 뻔했다.
 
 뒤로 좀 땡겨서 읽어보니까([19.5.3 Logging Out](https://docs.spring.io/spring-security/site/docs/5.0.5.RELEASE/reference/htmlsingle/#csrf-logout)) Get 방식으로 로그아웃 할 수 있게 하는 방법이 처음 설정했던 방법인데 비추천하는 방식이라고 한다.
+
+
+---
+# 연관된 포스트
+
+[Spring-Security Reference 따라하기 2](https://thecodinglog.github.io/spring/security/2018/05/25/spring-security-2.html)
+
+[Spring-Security Reference 따라하기 3](https://thecodinglog.github.io/spring/security/2018/06/07/spring-security-3.html)
+
+[Spring-Security Reference 따라하기 4](https://thecodinglog.github.io/spring/security/2018/06/12/spring-security-4.html)
