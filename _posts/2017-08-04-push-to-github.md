@@ -43,3 +43,10 @@ _fatal: refusing to merge unrelated histories_
 git pull origin branchname --allow-unrelated-histories*
 ```
 >pull 명령 뒤에 옵션을 주어 해결 할 수 있다.
+
+---
+
+#### https로 push 할 때 403 오류가 났을 때 시도 해볼만한 것 (26 Feb 2019, updated)
+```sh
+git remote set-url origin https://[github 계정명]@github.com/[github 계정명]/[repository 이름].git
+```
