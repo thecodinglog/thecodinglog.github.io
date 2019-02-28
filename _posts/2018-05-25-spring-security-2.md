@@ -348,3 +348,11 @@ cothe.springsecurityreference.config.WebSecurityConfig
 
 로그인 하면 정상적으로 처리 된다.
 ![](/assets/spring-security/2018-05-25-spring-security-2-2da8253b.png)
+
+---
+# 연관된 포스트
+[Spring-Security Reference 따라하기 1](https://thecodinglog.github.io/spring/security/2018/05/25/spring-security-1.html)
+
+[Spring-Security Reference 따라하기 3](https://thecodinglog.github.io/spring/security/2018/06/07/spring-security-3.html)
+
+[Spring-Security Reference 따라하기 4](https://thecodinglog.github.io/spring/security/2018/06/12/spring-security-4.html)

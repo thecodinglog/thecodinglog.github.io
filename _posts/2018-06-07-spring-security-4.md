@@ -675,3 +675,11 @@ setTargetBeanName, setTargetFilterLifecycle, Filter.doFilter, Filter.init, Filte
 FilterChainProxy는 구성된 필터에서 표준 필터 수명주기 메서드를 호출하지 않는다. 다른 Spring 빈처럼 다른 방법으로 Spring의 애플리케이션 컨텍스트 라이프 사이클 인터페이스를 사용하는 것이 좋다.
 
 네임스페이스 구성을 사용하여 웹 보안을 설정하는 방법을 살펴볼 때 DelegatingFilterProxy를 `springSecurityFilterChain`이라는 이름으로 사용했다. 이제 네임스페이스에서 만든 `FilterChainProxy`의 이름임을 알 수 있다.
+
+---
+# 연관된 포스트
+[Spring-Security Reference 따라하기 1](https://thecodinglog.github.io/spring/security/2018/05/25/spring-security-1.html)
+
+[Spring-Security Reference 따라하기 2](https://thecodinglog.github.io/spring/security/2018/05/25/spring-security-2.html)
+
+[Spring-Security Reference 따라하기 3](https://thecodinglog.github.io/spring/security/2018/06/07/spring-security-3.html)

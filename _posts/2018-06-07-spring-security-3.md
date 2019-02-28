@@ -540,3 +540,11 @@ inMemory 를 활용했을 때와 마찬가지로 인코딩을 사용하지 않�
 _namespace configuration_ 을 사용하면 `AccessDecisionManager` 의 디폴트 인스턴스가 자동으로 등록된다. 이게 메소드 호출이나 intercept-url에 기반한 웹 URL 액세스, protect-pointcut 등에 대하여 접근 제어를 한다.
 
 기본 전략은 `RoleVoter` 및 `AuthenticatedVoter`와 함께 `AffirmativeBased` `AccessDecisionManager`를 사용하는 것이다.
+
+---
+# 연관된 포스트
+[Spring-Security Reference 따라하기 1](https://thecodinglog.github.io/spring/security/2018/05/25/spring-security-1.html)
+
+[Spring-Security Reference 따라하기 2](https://thecodinglog.github.io/spring/security/2018/05/25/spring-security-2.html)
+
+[Spring-Security Reference 따라하기 4](https://thecodinglog.github.io/spring/security/2018/06/12/spring-security-4.html)
