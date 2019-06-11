@@ -4,7 +4,7 @@ title: GPS 좌표를 화면 좌표로 변환하기
 description: GPS 값을 화면에 표시하기 위한 계산 절차를 설명한다.
 date:   2019-04-25 13:00:00 +0900
 author: Jeongjin Kim
-categories: 수학 javascript
+categories: math javascript
 tags:	회전변환 GPS 좌표변환
 ---
 <script type="text/javascript" async
