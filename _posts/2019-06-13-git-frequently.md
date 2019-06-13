@@ -31,6 +31,9 @@ git clean -fd
 * 커밋id로 되돌림. 작업 했던 것은 안 날라감. 최종 수정 했던 상태로 남음
 ```plain
 git reset <커밋id>
+```
+* 커밋id로 되돌림. 작업했던 것 모두 없어짐
+```plain
 git reset --hard <커밋id>
 ```
 
