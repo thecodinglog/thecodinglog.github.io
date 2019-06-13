@@ -8,7 +8,6 @@ categories: git
 tags:	git
 ---
 ## 합치기
-```
 * merge 시작
 ```plain
 git mergetool
