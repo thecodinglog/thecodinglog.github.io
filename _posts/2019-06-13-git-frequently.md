@@ -7,6 +7,12 @@ author: Jeongjin Kim
 categories: git
 tags:	git
 ---
+## 가져오기
+* 리모트에 있는 브랜치를 Local로 가져오면서 브랜치 만들기
+```plain
+git checkout -b <생성할Local브랜치이름> <원격브랜치이름>
+```
+
 ## 합치기
 * merge 시작
 ```plain
