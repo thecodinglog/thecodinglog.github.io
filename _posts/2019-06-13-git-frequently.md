@@ -12,6 +12,15 @@ tags:	git
 ```plain
 git checkout -b <생성할Local브랜치이름> <원격브랜치이름>
 ```
+* 다른 브랜치에서 일부 파일만 가져오기
+```plain
+git checkout -patch <가져올브랜치이름> <가져올 파일이름>
+```
+>y-stage
+
+>n-no stage
+
+>a-stage all hunk
 
 ## 합치기
 * merge 시작
@@ -58,7 +67,10 @@ git checkout -- <file>
 ```plain
 git checkout -- .
 ```
-
+* untracked로 만들기
+```plain
+git rm --cached <file>
+```
 
 ## 브랜치 삭제
 * 리모트 브랜치 삭제
@@ -92,6 +104,7 @@ git branch -a
 ```plain
 git remote prune origin
 ```
+
 
 ## 최초 설정
 * 히스토리 조회를 그래프로 표시
