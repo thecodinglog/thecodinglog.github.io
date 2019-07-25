@@ -105,6 +105,17 @@ git branch -a
 git remote prune origin
 ```
 
+## 비교하기
+* difftool을 이용해서 현재 branch와 다른 브랜치 비교
+```plain
+git difftool <branch>
+git difftool <branch> *.jsp
+```
+* difftool을 이용해서 커밋 간 비교
+```plain
+git difftool <commit1> <commit2>
+```
+
 
 ## 최초 설정
 * 히스토리 조회를 그래프로 표시
