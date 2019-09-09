@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Enum으로 JPA 상속관계 구분 커럼 지정 
-description: Enum으로 JPA 상속관계 구분 커럼 지정
+title: enum으로 JPA 상속관계 구분 컬럼 지정 
+description: enum으로 JPA 상속관계 구분 컬럼 지정
 date:   2019-09-09 13:00:00 +0900
 author: Jeongjin Kim
 categories: JPA
