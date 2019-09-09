@@ -5,7 +5,7 @@ description: Enum으로 JPA 상속관계 구분 커럼 지정
 date:   2019-09-09 13:00:00 +0900
 author: Jeongjin Kim
 categories: JPA
-tags:	JPA DiscriminatorColumn
+tags:	JPA DiscriminatorColumn DiscriminatorValue Inheritance
 ---
 
 클래스의 상속관계를 JPA로 표현하기위해서 `@DiscriminatorColumn` 애노테이션으로 부모 클래스의 구분 컬럼을 지정하고 `@DiscriminatorValue` 애노테이션으로 자식 클래스가 사용할 구분자 값을 지정한다.
