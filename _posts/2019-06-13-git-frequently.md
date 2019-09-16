@@ -14,7 +14,7 @@ git checkout -b <생성할Local브랜치이름> <원격브랜치이름>
 ```
 * 다른 브랜치에서 일부 파일만 가져오기
 ```plain
-git checkout -patch <가져올브랜치이름> <가져올 파일이름>
+git checkout --patch <가져올브랜치이름> <가져올 파일이름>
 ```
 >y-stage
 
@@ -125,6 +125,10 @@ git config --global alias.lt "log --oneline --decorate --graph --all"
 * 머지툴 설정
 ```plain
 git config --global merge.tool winmerge
+```
+* Visual Studio Code 를 기본 에디터로 사용
+```plain
+git config --global core.editor "code --wait"
 ```
 
 ## 참고사항
