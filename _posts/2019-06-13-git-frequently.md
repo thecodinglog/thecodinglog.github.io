@@ -82,6 +82,12 @@ git push origin --delete <branch>
 git branch -d <branch>
 ```
 
+## 올리기
+* tag 리모트로 올리기
+```plain
+git push origin --tags
+```
+
 ## 현재 작업중인 것 임시 저장
 * 현재 변경 사항 저장
 ```plain
