@@ -137,6 +137,12 @@ git config --global merge.tool winmerge
 git config --global core.editor "code --wait"
 ```
 
+## 인증오류
+* remote: HTTP Basic: Access denied 발생시 시도해볼만 한 것
+```plain
+git config --system --unset credential.helper
+```
+
 ## 참고사항
 ### HEAD
 마지막 커밋 스냅샷, 다음 커밋의 부모 커밋, 현재 브랜치 마지막 커밋의 스냅샷
