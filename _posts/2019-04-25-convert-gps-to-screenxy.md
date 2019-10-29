@@ -15,6 +15,18 @@ GPS 좌푯값으로 지도의 어느 위치인지 표시하기 위한 좌표 변
 클라우드 지도 서비스를 이용해야 할 만큼 정밀한 지도가 필요하지 않고, 상대적으로 좁은 지역 정보를 화면상에 표시해야 할 때 유용할 것이라 생각한다.
 또한 위치정보표기 요청이 수초 단위로 짧아서 클라우드 서비스를 활용하기에는 비용이 많이 발생할 것이라고 판단이 될 때 또한 대안이 될 것이다.
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 아래 사진은 인천 송도에 있는 공원 지도를 캡처한 사진이다. 공원에서 관리하는 자산, 예를 들어 관리용 카트 같은것에 GPS 수신기가 있어
 실시간 위치 모니터링이 필요하다고 해보자.
 
@@ -43,6 +55,7 @@ GPS 값을 표기하는 방법 다양한데 문제를 단순화하기 위해서 
 <img src="/assets/2019-04-25-convert-gps-to-screenxy/2019-04-25-convert-gps-to-screenxy_001443.png" width="400px" style="margin-left: auto;margin-right: auto;">
 
 <img src="/assets/2019-04-25-convert-gps-to-screenxy/2019-04-25-convert-gps-to-screenxy_001928.png" width="400px" style="margin-left: auto;margin-right: auto;">
+
 
 # 데이터 준비
 지도 이미지를 표시할 영역을 DIV tag로 지정하고 백그라운드 이미지로 위에서 회전시킨 이미지를 넣는다.
@@ -287,6 +300,17 @@ lonQuation = makeLinearEquation(data[0].lon, data[0].x, data[1].lon_rotated, dat
 latQuation = makeLinearEquation(data[0].lat, data[0].y, data[2].lat_rotated, data[2].y);
 ```
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 
 # GPS 좌표를 스크린 좌표로 변환
 
