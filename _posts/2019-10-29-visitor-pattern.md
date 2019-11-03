@@ -8,7 +8,7 @@ categories: Design
 tags:	방문자 패턴 VisitorPattern Visitor Design pattern Double Dispatch
 ---
 
-Visitor pattern, 방문자 패턴, **실제 로직을 가지고 있는 객체(Visitor)**가 로직을 적**용할 객체(Element)를 방문**하면서 실행하는 패턴이다.
+Visitor pattern, 방문자 패턴, **실제 로직을 가지고 있는 객체(Visitor)**가 로직을 **적용할 객체(Element)**를 **방문**하면서 실행하는 패턴이다.
 즉, **로직과 구조를 분리**하는 패턴이라고 볼 수 있다. 로직과 구조가 분리되면 구조를 수정하지 않고도 새로운 동작을 기존 객체 구조에 추가할 수 있다.
 
 이 포스트에서는 주어진 도메인 문제를 해결해가면서 나타나는 문제점을 이야기해보고 이것을 해결해 나가면서 방문자 패턴을 적용해나가는 과정을 설명한다.
