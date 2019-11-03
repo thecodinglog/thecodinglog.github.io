@@ -265,13 +265,19 @@ public class Main {
 컴파일되는가? 아쉽게도 이렇게는 사용할 수 없다. 
 
 왜냐하면 `Benefit` 인터페이스의 `point`와 `discount` 메소드는 파라미터 타입으로 구분하여 **오버로딩**을 하고 있다.
+
+
 >메소드 시그니처 = 메소드 이름 + 파라미터 타입
+
+
 ```java
 public void point(VipMember member)
 public void point(GoldMember member)
 ```
+
 두 메소드를 구분하여 실행하기 위해서는 전달받은 파라미터가 `VipMember` 또는 `GoldMember` 이어야 한다.
 그런데 `main` 메소드에서 호출한 `point` 메소드는 둘 다 `Member` 타입 파라미터이다.
+
 ```java
 Member goldMember = new GoldMember();
 Member vipMember = new VipMember();
