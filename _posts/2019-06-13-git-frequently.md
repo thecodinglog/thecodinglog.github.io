@@ -7,6 +7,20 @@ author: Jeongjin Kim
 categories: git
 tags:	git
 ---
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
 ## 가져오기
 * 리모트에 있는 브랜치를 Local로 가져오면서 브랜치 만들기
 ```plain
@@ -165,3 +179,14 @@ git reset [--mixed] HEAD~
 git reset --hard HEAD~
 ```
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>

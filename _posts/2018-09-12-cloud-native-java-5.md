@@ -8,6 +8,19 @@ categories: Cloud Spring Java
 tags:	Cloud Spring Java Spring-boot
 ---
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
 **git 저장소**에 HTTP 기본 인증과 같은 보안 처리가 되어 있으면 **서버**에 인증 정보가 있어야 접근이 가능하다.
 * spring.cloud.config.server.git.username 
 * spring.cloud.config.server.git.passwaord

@@ -8,6 +8,18 @@ categories: JPA MyBatis Spring
 tags:	JPA MyBatis Transaction SpringData
 ---
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 이 포스트는 같은 트랜잭션 내에 **JPA**와 **MyBatis**를 사용하는 방법을 **Spring Transaction** 을 이용한 예제를 보여준다.
 
 # JpaTransactionManager
@@ -211,3 +223,15 @@ public class JpaWithMybatisApplicationTests {
 In transaction : 2
 Out transaction : 2
 ```
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>

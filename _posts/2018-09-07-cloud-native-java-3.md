@@ -8,6 +8,18 @@ categories: Cloud Spring Java
 tags:	Cloud Spring Java Spring-boot
 ---
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 # 스프링 클라우드 설정 서버로 중앙집중형 설정 사용하기
 
 설정정보를 외부 파일로 분리해서 사용하는 방법을 앞선 포스트에서 했었는데 몇 가지 남은 문제점들이 있다.

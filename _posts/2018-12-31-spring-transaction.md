@@ -8,6 +8,19 @@ categories: spring
 tags:	multi multiple spring transaction 스프링 트랜잭션
 ---
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
 다중 스프링 트랜잭션을 Programmatic하게 제어하는 방법을 공유하고자 한다. 수작업으로 트랜잭션을 제어하는데 `transaction synchronization is not active` 에러가 뜨면 이 글을 읽어보기 바란다.
 ## 트랜잭션 경계 설정 방법
 스프링에서 트랜잭션을 다루는 방법은 크게 3가지 정도로 나눌 수 있다.

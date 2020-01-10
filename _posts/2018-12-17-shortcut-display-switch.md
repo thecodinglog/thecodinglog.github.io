@@ -8,6 +8,19 @@ categories: windows
 tags:	듀얼모니터 확장 전환 단축 windows display switch 꿀팁
 ---
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
 나는 데스크탑 Windows PC 한 대와 맥북 한 대를 사용해서 작업을 한다.
 모니터 하나로 일하는 것은 여러모로 불편해서 모니터 한 대를 추가 구입해 듀얼모니터로 사용하고 있다.
 
@@ -81,3 +94,15 @@ Windows 환경에서 커스텀 단축키를 설정하게 해주는 오토핫키 
 ![](/assets/2018-12-17-shortcut-display-switch/2018-12-17-shortcut-display-switch_182532.png)
 
 이런 방법으로 단축아이콘을 하나 더 만들어서 항목 위치 입력에 옵션을 `/extend` 로 해주면 화면을 확장하는 단축키를 만들 수 있다.
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>

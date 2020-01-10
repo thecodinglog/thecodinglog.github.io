@@ -8,6 +8,19 @@ categories: Spring Security
 tags:	spring security spring-security 스프링 스프링시큐리티 보안 시큐리티 reference 레퍼런스 따라하기
 ---
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
 # 계층구조 Role
 
 우리가 정의한 `Role`은 부모 `Role`을 가지질 수 있는 계층적인 구조이다. 따라서 부모가 가지고 있는 `Permission` 이 그대로 상속되고, 권한 체크할 때 부모가 가진 `Permission`도 모두 검증해봐야 한다. 그러기 전에 먼저, JPA의 `JpaRepository` interface가 계층적인 구조에서 잘 동작하는지 검증해보자.
@@ -294,3 +307,16 @@ public class Role {
 [Spring Security로 Security 서비스 구축하기 2](/spring/security/2018/08/15/spring-security-service-2.html)
 
 [Spring Security로 Security 서비스 구축하기 1](/spring/security/2018/07/31/spring-security-service-1.html)
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>

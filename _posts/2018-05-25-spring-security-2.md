@@ -9,6 +9,19 @@ categories: Spring Security
 tags:	spring security spring-security 스프링 스프링시큐리티 보안 시큐리티 reference 레퍼런스 따라하기
 ---
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
 계속해서 레퍼런스를 따라해보자. OAuth 는 일단 넘어가고 [5.8 Authentication](https://docs.spring.io/spring-security/site/docs/5.0.5.RELEASE/reference/htmlsingle/#jc-authentication) 부터 다시 보자.
 
 ### Spring-security Sample 실행 해 보기
@@ -356,3 +369,15 @@ cothe.springsecurityreference.config.WebSecurityConfig
 [Spring-Security Reference 따라하기 3](https://thecodinglog.github.io/spring/security/2018/06/07/spring-security-3.html)
 
 [Spring-Security Reference 따라하기 4](https://thecodinglog.github.io/spring/security/2018/06/12/spring-security-4.html)
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>

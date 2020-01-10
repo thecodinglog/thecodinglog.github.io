@@ -8,6 +8,19 @@ categories: spring
 tags: ContextRefreshedEvent Spring BeanPostProcessor BeanFactoryPostProcessor BeanDefinitionRegistryPostProcessor mybatis
 ---
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
 프로젝트에 커스텀 설정정보를 이용해서 **동적으로 스프링 빈 등록**을 하려고 한다. 이 기능이 필요했던 이유는 _mybatis_ 때문인데 mybatis를 사용하려면 `SqlSessionTemplate`, `SqlSessionFactory`, `Datasource`, `TransactionManager` 등 접속 정보 하나를 추가할 때 마다 하려면 다른 Class들도 빈으로 같이 등록해줘야 했기 때문이다. DataSource 3개만 돼도 비슷비슷한 이름으로 많은 양의 코드가 증가하게 되는데 이는 필시 개발자가 오타 등으로 예상치 못한 **오류를 유발**할 수 있다.
 
 그래서 최소한의 정보(데이터소스 정보)만 가지고 mybatis를 사용할 수 있도록 구현하고자 한다.

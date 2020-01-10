@@ -7,6 +7,18 @@ author: Jeongjin Kim
 categories: Cloud Spring Java
 tags:	Cloud Spring Java Spring-boot
 ---
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 
 클라우드 네이티브 자바를 보면서 필요한 부분을 따라해본 코드를 간단한 코멘트와 함께 공유하고자 한다.
 

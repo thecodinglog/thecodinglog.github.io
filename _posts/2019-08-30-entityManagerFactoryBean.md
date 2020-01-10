@@ -7,6 +7,17 @@ author: Jeongjin Kim
 categories: Spring
 tags:	Spring JPA EntityManagerFactory
 ---
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 
 `LocalContainerEntityManagerFactoryBean` 을 이용해서 직접 Bean 을 등록할 때
 

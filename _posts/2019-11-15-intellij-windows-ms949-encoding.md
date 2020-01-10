@@ -8,6 +8,18 @@ categories: IDE
 tags:	intellij ms949 utf8 encoding
 ---
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 윈도우에 설치한 IntelliJ에서 Build 할 때 한글로 된 코멘트 등으로 인해 오류가 발생하면 인코딩 설정을 적절히 변경하면 된다.
 
 문제는 분명히 파일의 인코딩 타입은 utf-8 이고 IntelliJ의 File Encodings 옵션에 UTF-8로 설정했음에도 해결이 안되는 경우가 있다.

@@ -8,6 +8,19 @@ categories: JPA
 tags:	JPA DiscriminatorColumn DiscriminatorValue Inheritance
 ---
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
 클래스의 상속관계를 JPA로 표현하기위해서 `@DiscriminatorColumn` 애노테이션으로 부모 클래스의 구분 컬럼을 지정하고 `@DiscriminatorValue` 애노테이션으로 자식 클래스가 사용할 구분자 값을 지정한다.
 
 `@DiscriminatorValue`는 `String` 타입을 Value 로 지정하게 되어있다.

@@ -9,6 +9,19 @@ categories: Spring Security
 tags:	spring security spring-security 스프링 스프링시큐리티 보안 시큐리티 reference 레퍼런스 따라하기
 ---
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
 ## 목적
 내가 원하는 인증과 권한 모델을 스프링 시큐리티와 결합하여 프레임워크에서 제공하는 보안 기능을 최대한 활용하고자 한다. 구체적인 인증과 권한 모델의 Database table 설계는 차후 진행하고 먼저 레퍼런스를 참고하면서 스프링 시큐리티는 어떤 구조로 되어 있고 내가 커스터마이즈 할 수 있는 부분이 어디인지 또 어떻게 해야 하는지 공부하면서 기록해보고자 한다.
 
@@ -421,3 +434,15 @@ home log out 버튼이 달란 화면이 뜨고, 버튼을 누르면
 [Spring-Security Reference 따라하기 3](https://thecodinglog.github.io/spring/security/2018/06/07/spring-security-3.html)
 
 [Spring-Security Reference 따라하기 4](https://thecodinglog.github.io/spring/security/2018/06/12/spring-security-4.html)
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>

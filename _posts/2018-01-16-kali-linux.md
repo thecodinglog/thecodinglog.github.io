@@ -8,6 +8,20 @@ author: Jeongjin Kim
 categories: Security
 tags:	kali linux 칼리리눅스 미러사이트 hangul
 ---
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
 Kali linux에 한글폰트를 apt-get를 이용하여 설치할 수 있다.
 
     apt-get install fonts-nanum*

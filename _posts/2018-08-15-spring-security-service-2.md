@@ -7,6 +7,20 @@ author: Jeongjin Kim
 categories: Spring Security
 tags:	spring security spring-security 스프링 스프링시큐리티 보안 시큐리티 reference 레퍼런스 따라하기
 ---
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
 앞선 포스트에서는 SpringSecurity에서 인증을 할 수 있도록 관련 클래스를 정의하고 테스트를 해보았다. 이번 포스트는 사용자가 가지고 있는 **Role** 을 기반으로 접근 권한이 있는지 없는지 확인하는 `Voter` 를 만들어 테스트할 것이다. 
 
 # 사용자 오브젝트가 권한을 가지도록 변경
@@ -539,3 +553,17 @@ public class MockRoleProvider implements RoleProvider {
 [Spring Security로 Security 서비스 구축하기 3](/spring/security/2018/09/06/spring-security-service-3.html)
 
 [Spring Security로 Security 서비스 구축하기 1](/spring/security/2018/07/31/spring-security-service-1.html)
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>

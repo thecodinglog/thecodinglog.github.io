@@ -8,6 +8,18 @@ categories: Gradle Spring-boot
 tags:	Gradle Spring-boot multi-project nexus
 ---
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 실행되는 프로젝트와 API 들을 묶어 놓은 프로젝트를 구분해야 하는 경우가 있다. 이때 이들을 별도의 프로젝트로 분리해놓으면 의존관계 때문에 꽤나 귀찮은 일들이 생길 수 있어서 하나의 큰 프로젝트안에 여러 소규모 프로젝트로 나누어 관리하기도 한다. 이렇게 나누어 관리하기 위한 설정을 기록해 놓고자 한다.
 
 ## 환경
@@ -151,3 +163,15 @@ subprojects {
 
 ## 마무리
 이렇게 정리 해놓으면 간단한데 이상하게 gradle 문법은 헷갈리기도 하고 개념이 머리에 잘 안들와서 어려운 것 같다. 끝.
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>

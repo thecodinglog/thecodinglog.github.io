@@ -8,6 +8,18 @@ categories: Cloud Spring Java
 tags:	Cloud Spring Java Spring-boot
 ---
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 ## 스프링 클라우드 설정 클라이언트
 
 * 스프링 클라우드 기반 서비스는 실행할 때 `src/main/resources/bootstrap.properties`(또는 yml) 파일을 찾는다. 

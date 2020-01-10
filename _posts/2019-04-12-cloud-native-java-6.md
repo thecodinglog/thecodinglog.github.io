@@ -7,6 +7,18 @@ author: Jeongjin Kim
 categories: Cloud Spring Java
 tags:	Cloud Spring Java Spring-boot
 ---
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 
 한 서버에서 모든 설정 정보를 가지고 있고, 클라이언트는 그 서버에 접속하여 설정 정보를 가져오는 방식은 관리상 편리함을 준다.
 
@@ -116,6 +128,20 @@ spring:
       name: user1
       password: pass
 ```
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
 
 ## 설정 파일 준비
 configuration.projectName 에 `Spring Boot Project 3` 라는 값을 넣었다.

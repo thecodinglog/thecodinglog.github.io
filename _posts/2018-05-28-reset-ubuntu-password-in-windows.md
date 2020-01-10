@@ -8,6 +8,20 @@ author: Jeongjin Kim
 categories: Windows Linux
 tags:	Ubuntu Linux Windows Password 윈도우10 패스워드 리셋
 ---
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
 Windows 10에는 _**Bash shell**_ 을 지원한다. 보통 기본 유저로 작업들을 하지만 프로그램 설치 등 root 권한이 필요한 경우가 있다. 이때 root 패스워드가 기억이 나지 않는다면 또는 다른 사용자 계정의 패스워드가 기억이 나지 않는다면 초기화 시킬 방법이 필요하다. 그 방법에 대해서 설명한다.
 
 **1. 윈도우에서 명령 프롬프트 실행**

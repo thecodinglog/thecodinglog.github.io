@@ -8,6 +8,19 @@ categories: Spring
 tags:	Spring
 ---
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
 Spring context에서 Bean을 가져오기 위해 `getBean` 메소드를 주로 사용한다.
 
 `getBean` 메소드는 Bean 이름이나 Type 등을 받아서 해당하는 Bean이 있으면 인스턴스를 반환하고 

@@ -7,6 +7,20 @@ author: Jeongjin Kim
 categories: Spring Security
 tags:	spring security spring-security 스프링 스프링시큐리티 보안 시큐리티 reference 레퍼런스 따라하기
 ---
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
 # ViewVoter 보완
 
 앞선 포스트에서는 요청한 View가 사용자가 가진 View Type SecuredObject 중에 존재하는지 찾아봐서 접근허가 여부를 결정짓는 ViewVoter를 구현하였다. 이 구현체에 NPE을 대비한 코드를 조금 더 추가해서 완성도를 높혔다.
@@ -666,6 +680,18 @@ public class RequestedServiceMeta {
     private Map<String, String> params;
 }
 ```
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 
 # 테스트
 
@@ -973,3 +999,16 @@ public class DenialFirstServiceVoterTest {
 [Spring Security로 Security 서비스 구축하기 2](/spring/security/2018/08/15/spring-security-service-2.html)
 
 [Spring Security로 Security 서비스 구축하기 1](/spring/security/2018/07/31/spring-security-service-1.html)
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>

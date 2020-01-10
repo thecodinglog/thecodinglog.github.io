@@ -8,6 +8,19 @@ categories: Spring Security
 tags:	spring security spring-security 스프링 스프링시큐리티 보안 시큐리티 reference 레퍼런스 따라하기
 ---
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
 업무 시스템든 웹 서비스든 접근권한 관리 모듈은 필수 구성요소이다. 스프링 시큐리티는 인증과 접근권한 체크를 할 수 있는 클래스가 개발되어 있다. 그러나 실 도메인에서 사용하는 인증 방법과 접근권한체크 방법은 다양하기 때문에 가장 일반적인 방법으로 처리 할 수 있도록 구현되어있다.
 
 여기서는 스프링시큐리티에 개발된 클래스들을 기반으로 사용자관리, 접근권한 관리를 할 수 있는 서비스를 만든다.
@@ -508,3 +521,15 @@ public class AuthenticateTest {
 [Spring Security로 Security 서비스 구축하기 3](/spring/security/2018/09/06/spring-security-service-3.html)
 
 [Spring Security로 Security 서비스 구축하기 2](/spring/security/2018/08/15/spring-security-service-2.html)
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>

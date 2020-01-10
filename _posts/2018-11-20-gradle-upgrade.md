@@ -8,6 +8,19 @@ categories: Gradle
 tags:	gradle upgrade update
 ---
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
 SpringBoot를 2.1.0 으로 올리려니까 gradle plugin 버전이 4.4 이어야 한다고 오류가 떴다.
 
 ![](/assets/2018-11-20-gradle-upgrade/2018-11-20-gradle-upgrade_113112.png)

@@ -7,6 +7,20 @@ author: Jeongjin Kim
 categories: Spring Security
 tags:	spring security spring-security 스프링 스프링시큐리티 보안 시큐리티 reference 레퍼런스 따라하기
 ---
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
 # 지금까지
 두서없이 레퍼런스에 있는 코드를 활용해서 로그인, 로그아웃 기능을 구현해봤다. 이쯤에서 레퍼런스에 주요한 내용을을 살펴보고 원래 만들고자 했던 권한관리시스템을 점차 구현하고자 한다. 레퍼런스를 필요한 부분을 추려서 번역했고 필요한 경우 javadoc의 원문을 포함했다. 또한 참조할 만한 코드를 필요한 지점에 적절히 삽입하였다.
 # 기술 개요
@@ -683,3 +697,16 @@ FilterChainProxy는 구성된 필터에서 표준 필터 수명주기 메서드�
 [Spring-Security Reference 따라하기 2](https://thecodinglog.github.io/spring/security/2018/05/25/spring-security-2.html)
 
 [Spring-Security Reference 따라하기 3](https://thecodinglog.github.io/spring/security/2018/06/07/spring-security-3.html)
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>

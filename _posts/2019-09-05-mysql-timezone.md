@@ -8,6 +8,19 @@ categories: Mysql IntelliJ
 tags:	mysql IntelliJ
 ---
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
 IntelliJ에서 로컬에서 동작하고 있는 mysql 에 직접 접속하려고 하다보니 
 
 `The server time zone value 'KST' is unrecognized or represents more than one time zone.`

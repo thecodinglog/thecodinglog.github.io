@@ -8,6 +8,19 @@ categories: git
 tags:	git remote repository 병합
 ---
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
 리모트에 있는 git 서버에 repogitory가 있는데 이것과 git 리포지토리가 아닌 디렉토리를 병합해야 하는 경우에 어떻게 하는지 알아본다.
 
 예를들면 이런 경우이다.

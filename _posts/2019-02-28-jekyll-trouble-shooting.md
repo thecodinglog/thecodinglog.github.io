@@ -8,6 +8,18 @@ author: Jeongjin Kim
 categories: ruby
 tags:	jetkyll blog troubleshootring
 ---
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 
 # 은근히 시간 많이 걸리는 Jekyll 설치
 Jekyll을 사용하기 위해 필요한 환경을 구성하는 것은 Jekyll 홈페이지에 몇 줄 적어놓은

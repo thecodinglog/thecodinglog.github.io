@@ -7,6 +7,20 @@ author: Jeongjin Kim
 categories: tool markdown
 tags:	visual studio code markdown visualstudiocode
 ---
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
 jekyll로 blog를 작성하기 편리하도록 Visual Studio Code 에 플러그인과 약간의 설정변경을 하였다.
 
 개인적으로 마크다운 문서편집기로서 원하는 사항은 3가지 정도이다.

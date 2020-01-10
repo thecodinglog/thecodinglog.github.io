@@ -7,6 +7,19 @@ author: Jeongjin Kim
 categories: Cloud Spring Java
 tags:	Cloud Spring Java Spring-boot
 ---
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 앞선 Cloud Native Java 포스트에서는 스프링 프레임워크에서 어떻게 설정 값을들 객체와 매핑하여 사용할 수 있는지 설정했다. 스프링부트에서는 어떻게 쓸 수 있는지 알아보자.
 
 ## 스프링 부트 방식의  설정

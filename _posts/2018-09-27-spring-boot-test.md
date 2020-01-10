@@ -7,6 +7,18 @@ author: Jeongjin Kim
 categories: Spring-boot
 tags:	spring spring-boot 스프링부트 스프링부트테스트 spring-boot-test
 ---
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 
 Spring을 사용하는 라이브러리를 구현하고 **_spring-boot-test_** 로 테스트하고자 한다.
 
