@@ -17,8 +17,7 @@ title: codinglog
 subtitle: "코딩일기"
 email: thefuturecreator@gmail.com
 name: Jeongjin Kim
-description: >
-  안녕하세요. 코딩 로그입니다.
+description: COTHE의 기술 블로그
 # Base URL of site (i.e. /blog). It should always start with a slash,
 # and never end with a slash. Set it to a blank value if hosting at the
 # root of your server.

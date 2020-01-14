@@ -4,17 +4,17 @@ title: About
 permalink: /about/
 ---
 
-THECOTHE
+COTHE
 
 ### Interested in
 
-* Full stack design
-* Windows application development
-* SQL Tuning
-* MES Framework
-* Mobile business consulting
-* System architecture design
-* Maintaining MES
+* 애플리케이션 아키텍처 설계
+* 윈도우 애플리케이션 개발
+* MES Framework 개발
+* Spring Security
+* BPMN
+* SQL 튜닝
+
 
 ### Contact me
 
