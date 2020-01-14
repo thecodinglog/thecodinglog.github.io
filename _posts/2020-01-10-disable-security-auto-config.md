@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Spring Boot Security  Auto Configuration 끄기
-description: Spring Boot Security  Auto Configuration 끄기
+title: Spring Boot Security Auto Configuration 끄기
+description: Spring Boot Security Auto Configuration 끄기
 date:   2020-01-10 13:00:00 +0900
 author: Jeongjin Kim
 categories: Spring Security
