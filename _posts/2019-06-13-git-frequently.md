@@ -151,6 +151,18 @@ git config --global merge.tool winmerge
 git config --global core.editor "code --wait"
 ```
 
+
+## 숨기기
+* 트랙킹 중인 파일인데 로컬에서만 변경사항을 무시하기
+```plain
+git update-index --assume-changed [파일들]
+```
+* 트랙킹 중인 파일인데 로컬에서만 변경사항을 무시한것 해제하기
+```plain
+git update-index --assume-unchanged [파일들]
+```
+
+
 ## 인증오류
 * remote: HTTP Basic: Access denied 발생시 시도해볼만 한 것
 ```plain
