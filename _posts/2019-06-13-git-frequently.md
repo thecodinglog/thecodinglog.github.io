@@ -162,6 +162,11 @@ git update-index --assume-changed [파일들]
 git update-index --assume-unchanged [파일들]
 ```
 
+* 숨긴 파일 보기
+```plain
+git ls-files -v | grep "^h"
+```
+
 
 ## 인증오류
 * remote: HTTP Basic: Access denied 발생시 시도해볼만 한 것
