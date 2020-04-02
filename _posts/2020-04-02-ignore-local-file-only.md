@@ -34,18 +34,18 @@ git이 트래킹하고 있는 파일을 내 로컬에서만 잠시 변경사항�
 
 숨기려면
 
-```shell
+```plain
 git update-index --assume-unchanged <파일들>
 ```
 
 다시 보이게 하려면
-```shell
+```plain
 git update-index --no-assume-unchanged <파일들>
 ```
 
 현재 로컬에서 숨김 처리된 파일들을 보려면
 
-```shell
+```plain
 git ls-files -v | grep "^h"
 ```
 
