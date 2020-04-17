@@ -14,6 +14,21 @@ tags:	JPA Springboot Spring-boot
 
 그래도 소스에 출처 정보는 남기는 것이 좋지 않을까요?
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+
+
 ```java
 
 public class PhysicalNamingStrategy implements org.hibernate.boot.model.naming.PhysicalNamingStrategy {
