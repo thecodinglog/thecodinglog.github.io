@@ -12,7 +12,7 @@ Spring-Session을 사용하면 외부 저장 매체(mysql, Redis 등)를 이용�
 실제로 Session 동기화 기능이 있는 컨테이너를 사용하려면 막대한 비용이 들기도 하고 구성하기가 쉽지도 않습니다.
 특정 컨테이너 기술에 의존하게 되는 것도 문제입니다. Tomcat 2개로 서비스를 운영하다가 제우스에 서비스를 추가로 올려서 사용할 수 없다는 의미입니다.
 
-Spring-Session의 또 다른 이점은 한 화면에서 **여러 Session 쉽게 구성**할 수 있도록 해줍니다. G메일 같은 서비스를 보면 여러 ID를 변경해가면서 사용할 수 있는데 그런 거라고 보시면 됩니다.
+Spring-Session의 또 다른 이점은 한 화면에서 **여러 Session 쉽게 구성**할 수 있도록 해줍니다. G-Mail 서비스를 보면 여러 ID를 변경해가면서 사용할 수 있는데 그런 거라고 보시면 됩니다.
 
 이렇게 편리한 기능을 쉽게 사용할 수 있게 해주는 Spring-Session은 어떤 원리로 동작하는지 살펴보겠습니다.
 
@@ -125,18 +125,18 @@ Spring-Session을 설정하려면 필터를 추가해야 합니다. 다시 얘�
 </filter-mapping>
 ```
 
-그런데 필터 클래스가 `DelegatingFilterProxy` 입니다. 이 Spring 클래스가 _springSessionRepositoryFilter_ 이란 이름을 가진 빈을 찾아서 실행해 줄 건데 그 필터 클래스가 `org.springframework.session.web.http.SessionRepositoryFilter` 입니다. 이 필터가 하는 일은 `request` 객체로 `getSession()` 메소드를 호출했을 때 Spring-Session에서 관리하는 위치에서 Session 정보를 가져올 수 있도록 `Request` 객체를 **Warpping** 하고, Session 객체를 `SessionRepository` 를 이용해서 저장하는 일을 합니다. 뭐 크게 하는 일은 없습니다.
+그런데 필터 클래스가 `DelegatingFilterProxy` 입니다. 이 Spring 클래스가 _springSessionRepositoryFilter_ 이란 이름을 가진 빈을 찾아서 실행해 줄 건데 그 필터 클래스가 `org.springframework.session.web.http.SessionRepositoryFilter` 입니다. 이 필터는 `Request` 객체로 `getSession()` 메소드를 호출했을 때 _Spring-Session_ 에서 관리하는 위치에서 Session 정보를 가져올 수 있도록 `Request` 객체를 **Warpping** 하고, Session 객체를 `SessionRepository` 를 이용해서 저장하는 일을 합니다. 뭐 크게 하는 일은 없습니다.
 
 `SessionRepository`는 객체로 만들어진 Session을 어딘가에 저장하는 기능을 제공하기 위한 인터페이스인데 이게 어떤 구현체인가에 따라서 JDBC를 이용해서 RDBMS에 Session정보를 저장하느냐, Redis를 이용해서 저장하느냐가 갈립니다. 그래서 Spring-Session을 프로젝트에 반영할 때 _spring-session-jdbc_, _spring-session-redis_ 같은 의존성을 같이 추가하는 것입니다.
 
-이 Request 정보는 필터들을 거치고 Servlet에서 얼마든지 변경이 가능하기 때문에 모든 서비스가 수행되고 난 뒤 최종적으로 그 결과를 저장소에 저장해야합니다. 앞서 필터 체인이 재귀  호출처럼 동작하고 `doFilter` 이후에 또 다른 코드로 무언가를 할 수 있다고 말씀드렸습니다. 이쯤에서 위에서 그린 그림을 조금 더 자세히 표현을 해보겠습니다.
+이 Request 정보는 필터들을 거치고 Servlet에서 얼마든지 변경이 가능하기 때문에 모든 서비스가 수행되고 난 뒤 최종적으로 그 결과를 저장소에 저장해야합니다. 앞서 필터 체인이 재귀 호출로 동작하고 `doFilter` 이후에 또 다른 코드로 무언가를 할 수 있다고 말씀드렸습니다. 이쯤에서 위에서 그린 그림을 조금 더 자세히 표현을 해보겠습니다.
 
 <p><img src="/assets/2020-08-06-filter-chain/2020-08-06-filter-chain_173534.png" width='400px'></p>
 
-그림에서 보는 것과 같이 필터 체인들이 실행되고 그다음에 서블릿의 service 메소드를 호출하는 것이 아닙니다. 재귀 호출처럼 필터가 필터를 호출하고 쭉쭉 내려가다가 더이상 호출할 필터가 없으면 마지막 필터에서 서블릿 서비스를 호출합니다. 서비스가 종료되면 스택을 타고 올라가서 잴 처음에 있었던 Spring-Session 필터의 `doFilter` 메소드가 종료되고 바로 밑에 있는 `commitSession()` 메소드가 수행되면서 Session정보가 최종적으로 저장됩니다. 이때 영속성 저장매체에 저장이 되고 쿠키에도 SessionID를 내려줍니다. 이때 쓰는 ID가 _SESSIONID_ 입니다. 
+그림에서 보는 것과 같이 필터 체인들이 실행되고 그다음에 서블릿의 `service` 메소드를 호출하는 것이 아닙니다. 재귀 호출처럼 필터가 필터를 호출하고 쭉쭉 내려가다가 더이상 호출할 필터가 없으면 마지막 필터에서 서블릿 서비스를 호출합니다. 서비스가 종료되면 스택을 타고 올라가서 잴 처음에 있었던 Spring-Session 필터의 `doFilter` 메소드가 종료되고 바로 밑에 있는 `commitSession()` 메소드가 수행되면서 Session정보가 최종적으로 저장됩니다. 이때 영속성 저장매체에 저장이 되고 쿠키에도 _SessionID_ 를 내려줍니다. 이때 쓰는 ID가 _SESSIONID_ 입니다. 
 
-만약에 Spring-Session 필터가 제일 먼저 위치하지 않으면 어떻게 될까요? 먼저 수행된 필터가 있다고 가정하고 그 필터에서 Session을 참조하는 코드가 있다고 하면요? 그렇게 되면 Tomcat에 기본 Session 객체인 `StandardSession` 이 만들어지고 이어서 Spring-Session의 Session도 만들어집니다. 어차피 서비스 단에서 사용하는 Session정보는 Spring에서 감싼 정보를 줄 것이기 때문에 크게 상관은 없지만 쓸데없이 그 비싼 Session객체를 두 개나 만드는 꼴이 됩니다. 클라이언트에서 쿠키정보를 확인해보면 JSESSIONID 와 SESSIONID 둘 다 존재하게 됩니다.
+만약에 Spring-Session 필터가 제일 먼저 위치하지 않으면 어떻게 될까요? 먼저 수행된 필터가 있다고 가정하고 그 필터에서 Session을 참조하는 코드가 있다고 하면요? 그렇게 되면 Tomcat에 기본 Session 객체인 `StandardSession` 이 만들어지고 이어서 Spring-Session의 Session도 만들어집니다. 어차피 서비스 단에서 사용하는 Session정보는 Spring에서 감싼 정보를 줄 것이기 때문에 크게 상관은 없지만 쓸데없이 그 비싼 Session객체를 두 개나 만드는 꼴이 됩니다. 클라이언트에서 쿠키정보를 확인해보면 JSESSIONID 와 SESSIONID 둘 다 존재하게 됩니다. 그래서 Spring-Session의 필터는 가장 먼저 실행되도록 하는것이 매우 중요합니다.
 
 # 정리하며
 
-이 글을 작성한 이유는 _Spring-Session 이 어떻게 Tomcat이 만들어낸 JSESSIONID 쿠키를 없앨까?_ 라는 질문에서부터 시작했습니다. 그런데 알고 보니까 Spring-Session이 있음으로써 아얘 생성 자체가 안되는 것이었습니다. 만들어진 것을 없애는 것이 아니라 _Session은 게으르다_는 원리를 가지고 위트있게 만들어낸 Spring-Session 프로젝트에 감탄할 수 밖에 없었습니다.
+이 글을 작성한 이유는 _Spring-Session 이 어떻게 Tomcat이 만들어낸 JSESSIONID 쿠키를 없앨까?_ 라는 질문에서부터 시작했습니다. 그런데 알고 보니까 Spring-Session이 있음으로써 아얘 생성 자체가 안되는 것이었습니다. 만들어진 것을 없애는 것이 아니라 _Session은 게으르다_ 와 _필터와 서비스는 재귀 호출로 실행된다_ 라는 원리를 가지고 위트있게 만들어낸 Spring-Session 프로젝트에 감탄할 수 밖에 없었습니다.
