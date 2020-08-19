@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 쿠키로 세션을 유지하고 공유하는 방법
+title: 세션 동작 원리 - 쿠키와 세션의 관계
 description: 쿠키로 세션을 유지하고 공유하는 방법
 date:   2020-08-11 13:00:00 +0900
 author: Jeongjin Kim

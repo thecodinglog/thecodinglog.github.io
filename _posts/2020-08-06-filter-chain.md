@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Spring-Session 은 왜 그 모양일까?
+title: 스프링 세션 동작 원리 - 스프링 세션 어떻게 동작하는 것인가?
 description: Spring-Session 동작 원리
 date:   2020-08-07 09:00:00 +0900
 author: Jeongjin Kim
