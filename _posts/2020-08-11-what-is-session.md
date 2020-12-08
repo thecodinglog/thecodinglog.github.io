@@ -8,6 +8,19 @@ categories: Web
 tags:	Session Cookie
 ---
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
 우리가 매일 쓰는 웹사이트는 어떻게 보면 매우 단순한 방식으로 동작합니다. 그저 원하는 자료(Resource)를 웹서버에 요청하면 그 자료를 돌려주는 형태이지요.
 예를 들어 아래 주소에 있는 이미지를 달라고 요청하면 요청한 이미지를 돌려줍니다.
 
@@ -169,3 +182,14 @@ Tomcat에 클러스터링 기능이 있습니다만 평판은 그렇게 좋아 �
 개발자들이 의외로 세션에 관해서 헷갈리고 잘 모르는 경우가 많은 것 같습니다. _'세션이라는 용어가 다양한 컨텍스트에서 사용하기 때문 아닐까'_ 라는 생각이 듭니다. 이 글을 통해서 오해해서는 안 되는 것이 인증을 처리하기 위해서 세션이 무조건 필요하다고 생각하면 안 된다는 것입니다. 쿠키만 가지고도 충분히 인증정보를 다룰 수 있고 기타 필요한 정보도
 저장할 수 있습니다. 다만 쿠키만 사용했을 때 많은 보안 취약점이 있고 불필요한 네트워크 트래픽을 유발할 수 있기 때문에 세션 사용을 고려해야 한다는 것입니다. 언제가 될지는 모르겠지만 보안 측면에서 세션을 어떻게 다룰 것인가에 관해 정리해보겠습니다.
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>

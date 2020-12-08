@@ -118,4 +118,16 @@ Spring Security의 웹 인프라는 `FilterChainProxy` 인스턴스에 위임하
 
 #### 필터 체인 무시하기
 
-필터 Bean 목록을 제공하는 대신 filters = "none" 속성을 사용할 수 있습니다. 이것은 보안 필터 체인에서 요청 패턴을 완전히 생략합니다. 이 경로와 일치하는 항목에는 인증 또는 권한 부여 서비스가 적용되지 않으며 자유롭게 액세스 할 수 있습니다. 요청 중에 SecurityContext 컨텐츠의 컨텐츠를 사용하려면 보안 필터 체인을 통과해야합니다. 그렇지 않으면 SecurityContextHolder가 채워지지 않고 내용이 널이됩니다
+필터 Bean 목록을 제공하는 대신 filters = "none" 속성을 사용할 수 있습니다. 이것은 보안 필터 체인에서 요청 패턴을 완전히 생략합니다. 이 경로와 일치하는 항목에는 인증 또는 권한 부여 서비스가 적용되지 않으며 자유롭게 액세스 할 수 있습니다. 요청 중에 SecurityContext 컨텐츠의 컨텐츠를 사용하려면 보안 필터 체인을 통과해야합니다. 그렇지 않으면 SecurityContextHolder가 채워지지 않고 내용이 널이됩니다.
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>

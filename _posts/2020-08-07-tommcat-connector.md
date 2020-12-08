@@ -41,3 +41,15 @@ NIO / NIO2의 경우에만 값을 -1로 설정하면 _maxConnections_ 기능이 
 ### maxThreads
 
 커넥터에서 만드는 최대 요청 처리 스레드 수입니다. 즉 요청을 동시에 처리 할 수 있는 최대 수를 결정합니다. 지정되지 않은 경우 200으로 설정됩니다. Connector에 executor 를 연계한 경우 이 속성은 무시되고 executor를 사용합니다. executor가 구성되면 속성은 설정한 값으로 저장되지만 사용되지 않음을 명확히하기 위해 (JMX를 통해) -1로 보고됩니다.
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>

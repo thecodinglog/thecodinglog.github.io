@@ -16,6 +16,20 @@ Spring-Session의 또 다른 이점은 한 화면에서 **여러 Session 쉽게 
 
 이렇게 편리한 기능을 쉽게 사용할 수 있게 해주는 Spring-Session은 어떤 원리로 동작하는지 살펴보겠습니다.
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+
 # 서블릿 컨테이너에서 필터 동작
 
 Spring-Session은 필터로 동작하기 때문에 서블릿 컨테이너(Tomcat, Wildfly etc.)에서 필터가 어떤 방식으로 동작하는지 먼저 알아야 할 필요가 있습니다.
@@ -140,3 +154,16 @@ Spring-Session을 설정하려면 필터를 추가해야 합니다. 다시 얘�
 # 정리하며
 
 이 글을 작성한 이유는 _Spring-Session 이 어떻게 Tomcat이 만들어낸 JSESSIONID 쿠키를 없앨까?_ 라는 질문에서부터 시작했습니다. 그런데 알고 보니까 Spring-Session이 있음으로써 아얘 생성 자체가 안되는 것이었습니다. 만들어진 것을 없애는 것이 아니라 _Session은 게으르다_ 와 _필터와 서비스는 재귀 호출로 실행된다_ 라는 원리를 가지고 위트있게 만들어낸 Spring-Session 프로젝트에 감탄할 수 밖에 없었습니다.
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
