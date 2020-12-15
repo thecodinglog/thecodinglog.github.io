@@ -154,7 +154,8 @@ public <T extends Comparable<? super T>> T max(Collection<? extends T> col)
 
 이제 전체적인 구조는 파악이 되었고 이제 저 `?` 들만 남게 되었습니다.
 
-이어지는 포스트에서 `?` 와 앞선 포스트에서 본 한정자(Bounded Parameter)를 다시 한번 보면서 해석을 마무리 지어 보겠습니다.
+[이어지는 포스트](/java/2020/12/15/java-generic-wildcard.html)에서는 `?` 와 앞선 포스트에서 본 한정자(Bounded Parameter)에 대해 알아보겠습니다.
+
 
 혹시 제네릭 타입에 관해 기억이 나지 않으시면 [앞선 포스트](/java/2020/12/09/java-generic-class.html)를 참고해 주세요.
 
