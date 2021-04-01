@@ -45,7 +45,7 @@ highlightjs_theme: "monokai-sublime"
 #    category: '/category/:name/'
 
 # Disqus comments
-disqus_shortname: codinglog
+# disqus_shortname: codinglog
 
 # Google analytics
 ga_tracking_id: "UUA-42722662-1"
