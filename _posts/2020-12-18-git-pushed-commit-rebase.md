@@ -85,11 +85,3 @@ dev>git push -u origin dev
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-
-<script src="https://utteranc.es/client.js"
-        repo="thecodinglog/blog-comments"
-        issue-term="pathname"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script>
