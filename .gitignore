@@ -4,3 +4,4 @@ _site
 *.~ml
 /.vscode
 /.history
+Gemfile.lock
