@@ -138,6 +138,22 @@ git difftool <commit1> <commit2>
 
 
 ## 최초 설정
+* 이름과 이메일 설정
+```plain
+git config --global user.name "이름"
+git config --global user.email "이메일"
+git config user.name // 이름 확인
+git config user.email // 이메일 확인
+```
+* 줄바꿈 문자 설정
+```
+// windows 이면
+git config --global core.autocrlf true
+// mac or linux 이면
+git config --global input
+```
+> 운영체제마다 줄바꿈 문자가 다르기 때문에 설정한다. 윈도우에서 깃으로 올릴 때 `cr`를 빼고 가져올 때 자동으로 붙힌다. 맥은 올릴때 `cr`을 빼고 가져올 때는 그대로 가져온다.
+
 * 히스토리 조회를 그래프로 표시
 ```plain
 git config --global alias.lt "log --oneline --decorate --graph --all"
@@ -150,7 +166,19 @@ git config --global merge.tool winmerge
 ```plain
 git config --global core.editor "code --wait"
 ```
-
+> vs code를 머지툴로 사용하려면 `~/.gitconfig` 파일에서 직접 수정해서 저장하면 편리하다.
+> ```
+> [core]
+>     editor = code --wait
+> [diff]
+>     tool = default-difftool
+> [difftool "default-difftool"]
+>     cmd = code --wait --diff $LOCAL $REMOTE
+> [merge]
+>     tool = vscode
+> [mergetool "vscode"]
+>     cmd = code --wait $MERGED
+>      ```
 
 ## 숨기기
 * 트랙킹 중인 파일인데 로컬에서만 변경사항을 무시하기
