@@ -119,10 +119,14 @@ git branch -a
 ```
 
 
-## 리모트 히스토리 정리(브랜치를 삭제했는데 남아 있을 때)
-* 이미 리모트에서 삭제된 브랜치를 정리한다
+## 리모트 관리
+* 히스토리 정리(브랜치를 삭제했는데 남아 있을 때)-이미 리모트에서 삭제된 브랜치를 정리한다
 ```plain
 git remote prune origin
+```
+* 리모트의 url을 변경
+```plain
+git remote set-url <remote.name.to.change> <your.new.remote.url>
 ```
 
 ## 비교하기
