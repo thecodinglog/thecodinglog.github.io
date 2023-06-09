@@ -183,6 +183,11 @@ git config --global core.editor "code --wait"
 > [mergetool "vscode"]
 >     cmd = code --wait $MERGED
 >      ```
+* git pull 할 때 fast-forward 만 할 수 있도록 설정
+```plain
+git config --global pull.ff only
+```
+
 
 ## 숨기기
 * 트랙킹 중인 파일인데 로컬에서만 변경사항을 무시하기
