@@ -159,9 +159,10 @@ git config --global input
 > 운영체제마다 줄바꿈 문자가 다르기 때문에 설정한다. 윈도우에서 깃으로 올릴 때 `cr`를 빼고 가져올 때 자동으로 붙힌다. 맥은 올릴때 `cr`을 빼고 가져올 때는 그대로 가져온다.
 
 * 히스토리 조회를 그래프로 표시
-```plain
-git config --global alias.lt "log --oneline --decorate --graph --all --pretty=format:'%C(yellow)%h %Creset%s %C(bold blue)<%an> %C(green)(%ar) %C(reset)'"
 ```
+git config --global alias.lt "log --oneline --decorate --graph --all --pretty=format:'%C(yellow)%h %C(red)%d%C(reset) %C(bold yellow)%s %C(bold blue)<%an> %C(green)(%ar)%C(reset)'"
+```
+
 * 머지툴 설정
 ```plain
 git config --global merge.tool winmerge
