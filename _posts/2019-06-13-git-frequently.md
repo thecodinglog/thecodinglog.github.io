@@ -160,7 +160,7 @@ git config --global input
 
 * 히스토리 조회를 그래프로 표시
 ```plain
-git config --global alias.lt "log --oneline --decorate --graph --all"
+git config --global alias.lt "log --oneline --decorate --graph --all --pretty=format:'%C(yellow)%h %Creset%s %C(bold blue)<%an> %C(green)(%ar) %C(reset)'"
 ```
 * 머지툴 설정
 ```plain
