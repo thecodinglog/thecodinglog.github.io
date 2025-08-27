@@ -21,9 +21,6 @@ tags:	gradle
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-> **Windwos에 Gradle 설치** 하기 포스트는 **2025년 8월 27일 기준**으로 업데이트 되었습니다.
-
-
 ### 요구사항
 
 Gradle 최신 버전(9.0.0)은 Java JDK 17 이상이 설치되어 있어야 합니다. 주요 OS에서 대부분 설치가 가능합니다. 자바 버전은 아래 명령어로 확인할 수 있습니다.
