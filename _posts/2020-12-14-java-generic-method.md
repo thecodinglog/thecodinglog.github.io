@@ -16,8 +16,6 @@ public <T extends Comparable<? super T>> T max(Collection<? extends T> col){
 ```
 <sub>[리스트 1] 우리의 목표</sub>
 
-` `
-
 우리는 이 메소드를 한번 읽어 볼 꺼라고 이 고생을 하고 있습니다. 그런데 이 메소드를 정확하게 이해하기 위해서는 조금 더 힘을 내셔야 합니다. ^^;
 
 [앞선 포스트](/java/2020/12/09/java-generic-class.html)에서는 클래스에 타입 파라미터를 추가해서 *String Box, Integer Box, Double Box* 등 원하는 데이터 타입을 넣을 수 있는 **제네릭 타입**을 만들었습니다. 
@@ -38,8 +36,6 @@ public static <K, V> boolean methodName(K key, V value) {
 ```
 <sub>[리스트 2] 평범한 지네릭 메소드 선언 방법</sub>
 
-` `
-
 
 우선 타입 파라미터의 리스트를 선언을 해야 하는데 `<K, V>`라고 되어있는 부분이 선언 부분입니다.  이 선언 부분은 반드시 **리턴 타입 앞**에 두어야 합니다.  이 메소드는 스태틱 타입의 메소드이고 타입 파라미터 `K`와 `V`를 쓰는 메소드가 되겠습니다. 타입 파라미터로 메소드의 인자 `key`, `value` 를 각각 받고 있네요.
 
@@ -52,7 +48,6 @@ boolean result = GenericMethods.<String, Integer>methodName("key", 3);
 ```
 <sub>[리스트 3] 지네릭 메소드 호출 방법</sub>
 
-` `
 
 
 스태틱 메소드이므로 메소드를 담고 있는 클래스(`GenericMethods`에 임의로 만들었습니다.)에 `methodName` 메소드를 호출을 했습니다. 보통 메소드와 다르게 메소드 이름 바로 앞에 `<String, Integer>`로 타입 인자(Type argument)를 주고 메소드의 인자로 `"key"`와 `3` 를 넣었습니다.
@@ -67,8 +62,6 @@ boolean result = GenericMethods.<String, Integer>methodName("key", 3);
 boolean result = GenericMethods.methodName("key", 3);
 ```
 <sub>[리스트 4] 지네릭 메소드 간단하게 호출하는 방법</sub>
-
-` `
 
 
 이렇게만 해줘도 잘 동작합니다.  왜냐하면 인자로 넘겨받은 `"key"`와 `3`으로 타입 파라미터의 타입을 **추론**할 수 있기 때문입니다. 
@@ -87,8 +80,6 @@ boolean result2 = methodName("key", 3);
 <sub>[리스트 5] 짧게 축약된 호출 방법</sub>
 
 
-` `
-
 
 이렇게 축약된 형태로 호출을 할 수 있습니다.
 
@@ -104,8 +95,6 @@ public static <T> List<T> emptyList() {
 <sub>[리스트 6] 빈 리스트를 반환하는 제네릭 메소드</sub>
 
 
-` `
-
 
 [리스트 6]의 메소드는 `T`타입을 담을 수 있는 `ArrayList`를 반환하는 메소드입니다. 여기서 `T`는 어떻게 결정지을 수 있을까요?
 
@@ -113,8 +102,6 @@ public static <T> List<T> emptyList() {
 GenericMethods.<Integer>getList();
 ```
 <sub>[리스트 7] 짤없는 제네릭 메소드 호출</sub>
-
-` `
 
 
 제네릭 메소드를 호출하는 방법을 그대로 따르자면 [리스트 7]처럼 호출을 해야 하겠지요.
@@ -127,8 +114,6 @@ GenericMethods.<Integer>getList();
 List<Integer> list = GenericMethods.getList();
 ```
 <sub>[리스트 8] 타입 추론을 이용한 제네릭 메소드 호출</sub>
-
-` `
 
 
 반환 타입이 `List<Integer>` 인걸로 봐서 `T`는 `Integer` 이겠군... 이렇게 추론을 해서 타입을 결정할 수 있습니다.
@@ -144,8 +129,6 @@ List<Integer> list = GenericMethods.getList();
 public <T extends Comparable<? super T>> T max(Collection<? extends T> col)
 ```
 <sub>[리스트 9] 우리의 목표</sub>
-
-` `
 
 
 이 정의는 제네릭 메소드 인 것을 알게 되었습니다. 그리고 이 메소드의 타입 파라미터는 `public` 다음에 오는 `<T extends Comparable<? super T>>` 복잡하지만, 이 구문인 걸 알 수 있습니다.

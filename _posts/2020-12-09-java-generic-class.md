@@ -49,7 +49,7 @@ public class SimpleBox {
 ```
 <sub>[리스트 1] 아무거나 담을 수 있는 Box Class</sub>
 
-` `
+
 
 이 박스에 문자열을 하나 넣고 사용하는 코드를 만들어 봅니다.
 
@@ -59,7 +59,7 @@ simpleBox.setData("내 문자열");
 ```
 <sub>[리스트 2] 아무거나 담을수 있는 SimpleBox 에 String 타입 데이터를 넣는 코드</sub>
 
-` `
+
 
 *"내 문자열"* 이라는 데이터를 넣은 박스를 사용하는 코드를 만들어 봅니다.
 
@@ -70,7 +70,7 @@ System.out.println(i);
 ```
 <sub>[리스트 3] SimpleBox에 있는 데이터를 꺼내서 사용하는 코드</sub>
 
-` `
+
 
 `simpleBox`에 있는 데이터를 가져온 뒤 *+1* 연산을 수행해서 출력하는 구문입니다. 이렇게 작성해서 컴파일하면 컴파일이 될까요?
 
@@ -97,7 +97,7 @@ public class StringBox {
 ```
 <sub>[리스트 4] String 타입만 담을 수 있는 Box</sub>
 
-` `
+
 
 `String` 타입만 넣을 수 있는 `StringBox`를 만들었습니다. 이제 사용하는 코드를 작성해 보겠습니다.
 
@@ -111,7 +111,7 @@ System.out.println(i);
 ```
 <sub>[리스트 5] StringBox를 사용하는 코드</sub>
 
-` `
+
 
 [리스트 3]의 코드처럼 Box에 있는 데이터를 가져와 `Integer`로 형 변환 뒤 연산하는 코드입니다. 컴파일되나요?
 
@@ -131,7 +131,7 @@ public class IntegerBox {
 ```
 <sub>[리스트 6] 또 만든 IntegerBox</sub>
 
-` `
+
 
 
 만들고 나서 보니 `CharBox`, `LongBox` 등등 만들어야 할 일이 생겼습니다. 각각 다 만드는 게 좋은 방법일까요?
@@ -155,7 +155,7 @@ public class GenericBox<T> {
 ```
 <sub>[리스트 7] 제네릭 Box 구현</sub>
 
-` `
+
 
 
 앞선 Box 구현과 다르게 `<T>` 라는 표시가 생겼고 타입을 선언하던 자리에는 `T` 라는 글자가 대체하고 있습니다. 딱 보면 아시겠지만, `T`는 `String`, `Integer`, `Char` 등 Box 클래스를 만들 때 받은 타입 정보와 교체되어서 실 객체가 만들어집니다.
@@ -170,19 +170,16 @@ genericBox.setData("내 문자열");
 ```
 <sub>[리스트 8] String 타입 Box 사용</sub>
 
-` `
+
 
 `GenericBox` 뒤에 `<String>`을 넣어 이 박스는 `String`을 위한 박스라고 지정합니다. `StringBox`와 마찬가지로 `new` 키워드를 이용해서 객체를 생성합니다. 
 
-` `
 
->```java
+```java
 GenericBox genericBox = new GenericBox<String>();
 ```
 이렇게 쓰시면 안됩니다.
 
-
-` `
 
 
 [리스트 8]에서 `<String>`의 `String`을 ***타입 인자(Type argument)*** 라고 합니다.
@@ -198,7 +195,7 @@ System.out.println(i);
 ```
 <sub>[리스트 9] 억지로 형변환해 보는 코드</sub>
 
-` `
+
 
 
 컴파일이 되나요?
@@ -218,7 +215,7 @@ public class NumberGenericBox<T> {
 ```
 <sub>[리스트 10] 박스 끼리 연산하는 메소드</sub>
 
-` `
+
 
 
 자기 data를 `double`로 강제 형 변환하고, 인자로 받은 a의 data도 강제로 `double`로 형 변환한 뒤에 둘의 값을 2로 나눈 간단한 평균을 구하는 메소드입니다.
@@ -236,7 +233,6 @@ System.out.println(box1.average(box2));
 ```
 <sub>[리스트 11] 평균 구하는 연산을 실행해보는 코드</sub>
 
-` `
 
 결과는 *6.5*로 원하는 답이 나왔습니다. 
 
@@ -255,7 +251,7 @@ System.out.println(box1.average(box2));
 ```
 <sub>[리스트 12] Integer 타입 박스로 평균을 가져오는 코드</sub>
 
-` `
+
 
 
 타입 인자를 `Double`에서 `Integer`로 변경했습니다. 실행이 잘 될까요?
@@ -269,7 +265,7 @@ public double average(NumberGenericBox<T> a){
 ```
 <sub>[리스트 13] 겁나 복잡한 평균 구하는 로직 메소드</sub>
 
-` `
+
 
 
 `this.data` 즉 `Integer` 타입으로 선언된 data를 강제로 `double`로 형 변환하려고 하기 때문입니다.  타입 파라미터로 받은 타입이 `double`로 형 변환을 할 수 있다는 보장이 없습니다. `Integer`는 그래도 되지 않을까? 라는 약간의 기대감은 있지만 `String` 같은 아이는 어림도 없죠. 이렇게 프로그램 안정성이 크게 망가져 버렸습니다. 여기서 고민을 하게 됩니다. 타입 파라미터로 뭔가 불특정 다수의 타입을 받을 수 있도록 하고 싶은데 약간의 제약사항을 걸고 싶은 생각이 듭니다.
@@ -286,7 +282,7 @@ public class NumberBoundedGenericBox<T extends Number> {
 ```
 <sub>[리스트 14] 제약사항을 넣은 박스 클래스</sub>
 
-` `
+
 
 `<T extends Number>` 에 주목해주세요. 의미는 간단합니다. 어떤 타입 `T`를 인자로 받을 수는 있는데 `Number` 인터페이스 또는 클래스 이거나 상속받은 타입, 즉 하위 타입만 받을 수 있다는 의미입니다.
 
@@ -303,7 +299,7 @@ public double average(NumberBoundedGenericBox<T> a) {
 ```
 <sub>[리스트 15] Number 클래스에 있는 기능을 이용한 평균 구하는 로직</sub>
 
-` `
+
 
 
 `doubleValue`라는 메소드는 `Number` 클래스에서 제공하는 메소드입니다. 자기 data와 메소드 인자로 받은 box의 값도 `doubleValue()` 메소드를 이용해서 값을 변환한 뒤에 평균을 구하는 코드입니다.
@@ -321,7 +317,7 @@ System.out.println(b1.average(b2));
 ```
 <sub>[리스트 16] [리스트 12]와 같은 코드</sub>
 
-` `
+
 
 
 앞선 [리스트 12] 와 같은 코드를 이용해서 `Integer` 박스를 만들고 평균을 구하는 메소드를 실행해 보겠습니다. 실행이 잘 되나요?
@@ -336,7 +332,7 @@ System.out.println(b1.average(b2));
 public <T extends Comparable<? super T>> T max(Collection<? extends T> col)
 ```
 
-` `
+
 
 음... 일단 위에서 본 것은 클래스 옆에 타입 파라미터를 선언해서 Generic클래스로 만드는 것이었는데 이 코드는 메소드입니다. 아직 안 배웠습니다. 
 

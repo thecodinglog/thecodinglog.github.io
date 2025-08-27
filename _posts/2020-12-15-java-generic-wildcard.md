@@ -23,7 +23,6 @@ String string = "yaho";
 Object object = string;
 ```
 
-` `
 
 당연히 넣을 수 있습니다. 그렇다면 이건 어떤가요?
 
@@ -34,9 +33,6 @@ Object object = string;
 List<String> stringList = new ArrayList<>();
 List<Object> objectList = stringList;
 ```
-
-` `
-
 
 만약 이게 가능하다면 어떤 일이 일어날까요?
 
@@ -59,7 +55,7 @@ objectList.add(123);
 String s = stringList.get(0);  // 추가된 구문
 ```
 
-` `
+
 
 
 어라? 우리의 전제 `List<Object> objectList = stringList;` 가 수행이 된다면, `String` 타입 변수에 `Integer` 타입 값을 넣는 게 가능해지는군요.
@@ -70,11 +66,11 @@ String s = stringList.get(0);  // 추가된 구문
 
 타입 파라미터 간에는 상/하위 관계가 없고 `raw-type` 간에만 상/하위 관계가 존재합니다.
 
-` `
+
 
 ![](/assets/2020-12-15-java-generic-wildcard/2020-12-15-java-generic-wildcard_105337.png)
 
-` `
+
 
 이와 유사하게 컬렉션에 들어 있는 것들을 하나씩 꺼내서 출력하는 코드를 보겠습니다.
 나름 재사용성에 신경 쓴다고 컬렉션의 어떤 타입이든 받아서 출력할 수 있도록 메소드 인자를 `Collection<Object>` 타입으로 한 메소드 `printCollection`을 만들었습니다.
@@ -92,8 +88,6 @@ public static void main(String[] args) {
     printCollection(c);
 }
 ```
-
-` `
 
 
 그러나... 이 메소드가 의도대로 동작할까요? *컴파일조차 안 됩니다*. 왜요?
