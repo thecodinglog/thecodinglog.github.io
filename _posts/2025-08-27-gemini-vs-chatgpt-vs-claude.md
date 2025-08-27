@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Gemini vs ChatGPT vs Claude: AI 대전의 진짜 승자는 누구인가?
-description: Gemini vs ChatGPT vs Claude: AI 대전의 진짜 승자는 누구인가?
+title: Gemini vs ChatGPT vs Claude - AI 대전의 진짜 승자는 누구인가?
+description: Gemini vs ChatGPT vs Claude - AI 대전의 진짜 승자는 누구인가?
 date:   2025-08-27 11:00:00 +0900
 author: Jeongjin Kim
 categories: AI
