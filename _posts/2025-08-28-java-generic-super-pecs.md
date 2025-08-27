@@ -10,6 +10,19 @@ tags:	Java Wildcard Generics Generic
 
 지금까지 [제네릭 클래스](/java/2020/12/09/java-generic-class.html), [제네릭 메소드](/java/2020/12/14/java-generic-method.html), [와일드카드의 extends](/java/2020/12/15/java-generic-wildcard.html)에 대해서 알아보았습니다. 드디어 우리의 목표 메소드를 완전히 해석할 수 있는 마지막 퍼즐 조각인 `super` 키워드에 대해 알아보겠습니다.
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
 ```java
 public <T extends Comparable<? super T>> T max(Collection<? extends T> col)
 ```
