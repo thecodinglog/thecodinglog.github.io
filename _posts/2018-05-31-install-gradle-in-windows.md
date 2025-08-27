@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Windows에 Gradle 설치하기
-subtitle: Windows에 수작업으로 Gradle 설치하기
-description: Windows에 수작업으로 Gradle 설치하기
-date:   2019-09-11 11:03:00 +0900
+title: Windows에 Gradle 9 설치하기
+subtitle: Windows에 수작업으로 Gradle 9 설치하기
+description: Windows에 수작업으로 Gradle 9 설치하기
+date:   2025-08-27 11:03:00 +0900
 author: Jeongjin Kim
 categories: Gradle
 tags:	gradle
@@ -21,12 +21,12 @@ tags:	gradle
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-> **Windwos에 Gradle 설치** 하기 포스트는 **2020년 4월 5일 기준**으로 업데이트 되었습니다.
+> **Windwos에 Gradle 설치** 하기 포스트는 **2025년 8월 27일 기준**으로 업데이트 되었습니다.
 
 
 ### 요구사항
 
-Gradle은 Java JDK 8 이상 설치되어 있다면 주요 OS에서 대부분 설치가 가능합니다. 자바 버전은 아래 명령어로 확인할 수 있습니다.
+Gradle 최신 버전(9.0.0)은 Java JDK 17 이상이 설치되어 있어야 합니다. 주요 OS에서 대부분 설치가 가능합니다. 자바 버전은 아래 명령어로 확인할 수 있습니다.
 
   **자바버전 확인**
 ```sh
@@ -38,9 +38,10 @@ Gradle은 Groovy Library를 포함하여 배포되기 때문에 특별히 따로
 
 ### 설치파일 다운로드
 
-[다운로드](https://gradle.org/releases/) 페이지에서 원하는 버전을 다운로드 받습니다. 여기서는 2020년 4월 5일 기준 최신 버전(6.3) 기준으로 합니다.
+[다운로드](https://gradle.org/releases/) 페이지에서 최신 버전인 9.0.0 버전을 다운로드 받습니다.
 
-실행 파일만 있는 [binary-onle](https://gradle.org/next-steps/?version=6.3&format=bin)나 각종 문서을 포함하고 있는 [complete](https://gradle.org/next-steps/?version=6.3&format=all) 를 받습니다.
+실행 파일만 있는 [binary-onle](https://gradle.org/next-steps/?version=9.0.0&format=bin)나 각종 문서을 포함하고 있는 [complete](https://gradle.org/next-steps/?version=9.0.0&format=all) 를 받습니다.
+
 
 ### 압축 해제
 
@@ -57,7 +58,7 @@ _윈도우 키_ 를 눌러서 검색란에 _환경 변수_ 라고 입력하면 *
 
 변수 이름에 _GRADLE_HOME_
 
-변수 값에 `C:\Gradle\gradle-6.3`
+변수 값에 `C:\Gradle\gradle-9.0.0`
 
 시스템 변수 중 **_Path_** 를 선택해서 **_편집_** -> **_새로 만들기_** `%GRADLE_HOME%\bin` 추가합니다.
 
@@ -75,17 +76,15 @@ gradle -v
 
 ```
 ------------------------------------------------------------
-Gradle 6.3
+Gradle 9.0.0
 ------------------------------------------------------------
 
-Build time:   2020-03-24 19:52:07 UTC
-
-~~~~
-
+Build time:   2025-07-31 ...
+...
 
 ```
 
-> 명령 프롬프트가 환경설정 전에 열려있었다면 닫고 다시 열어야합니다.
+> 환경 변수를 설정하기 전에 명령 프롬프트가 열려 있었다면, 닫고 다시 열어야 변경된 설정이 적용됩니다.
 
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
