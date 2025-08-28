@@ -136,11 +136,13 @@ public <T extends Comparable<? super T>> T max(Collection<? extends T> col)
 
 `Collection<? extends T> col`에서 *T 타입보다 하위 타입인 어떤 것을 저장하는 컬렉션*을 인자로 받는 메소드인 것을 알 수 있습니다.
 
-그럼 T 타입은 무엇이냐? 그러기 위해서는 조금 더 알아야 할 키워드가 있습니다. super.
+그럼 T 타입은 무엇이냐? 그러기 위해서는 조금 더 알아야 할 키워드가 있습니다. `super`.
 
 이어지는 포스트는 이렇게나 복잡한 와일드카드에 대해 더 자세한 내용으로 이야기해 보겠습니다.
 
-고고!
+
+
+다음 포스트 [자바 제네릭 super 와일드카드와 PECS 원칙](/java/2025/08/28/java-generic-super-pecs.html) 고고!
 
 
 
