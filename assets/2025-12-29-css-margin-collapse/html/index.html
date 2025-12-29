@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마진 겹침 현상 이해하기</title>
+    <style>
+        body {
+            font-family: 'Malgun Gothic', sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .demo-container {
+            background: white;
+            padding: 20px;
+            margin-bottom: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .demo-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+            border-bottom: 2px solid #007acc;
+            padding-bottom: 5px;
+        }
+        
+        /* 1. 형제 요소 간 마진 겹침 */
+        .sibling-demo .box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .sibling-demo .first-box {
+            margin-bottom: 30px;
+            border: 3px solid #ff6b6b;
+        }
+        
+        .sibling-demo .second-box {
+            margin-top: 20px;
+            border: 3px solid #4ecdc4;
+        }
+        
+        /* 2. 부모-자식 간 마진 겹침 (문제 상황) */
+        .parent-child-problem {
+            background: #ffe066;
+            margin-top: 20px;
+            /* padding이나 border 없음 - 마진 겹침 발생! */
+        }
+        
+        .parent-child-problem .child {
+            background: #ff6b6b;
+            color: white;
+            padding: 15px;
+            margin-top: 30px;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        /* 3. 부모-자식 간 마진 겹침 (해결된 상황) */
+        .parent-child-fixed {
+            background: #ffe066;
+            margin-top: 20px;
+            padding-top: 1px; /* 이 한 줄로 마진 겹침 해결! */
+        }
+        
+        .parent-child-fixed .child {
+            background: #4ecdc4;
+            color: white;
+            padding: 15px;
+            margin-top: 30px;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        /* 4. 빈 블록 요소의 마진 겹침 */
+        .empty-block-demo .before {
+            background: #667eea;
+            color: white;
+            padding: 15px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        .empty-block-demo .empty {
+            margin-top: 15px;
+            margin-bottom: 35px;
+            /* height: 0; 내용도 없음 */
+            background: rgba(255, 107, 107, 0.3);
+            border: 2px dashed #ff6b6b;
+        }
+        
+        .empty-block-demo .after {
+            background: #4ecdc4;
+            color: white;
+            padding: 15px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        /* 겹침 방지 방법들 */
+        .no-collapse-flex {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .no-collapse-flex .box {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            margin: 0; /* 마진 대신 gap 사용 */
+        }
+        
+        .explanation {
+            background: #f8f9fa;
+            border-left: 4px solid #007acc;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        .explanation h4 {
+            margin-top: 0;
+            color: #007acc;
+        }
+        
+        .code-preview {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+        
+        .measurement {
+            font-size: 12px;
+            color: #666;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 5px 10px;
+            border-radius: 15px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>마진 겹침(Margin Collapse) 현상 완전 이해</h1>
+    
+    <!-- 1. 형제 요소 간 마진 겹침 -->
+    <div class="demo-container">
+        <div class="demo-title">1. 형제 요소 간 마진 겹침</div>
+        <div class="sibling-demo">
+            <div class="box first-box">
+                첫 번째 박스 (margin-bottom: 30px)
+                <div class="measurement">📐 아래쪽 마진: 30px</div>
+            </div>
+            <div class="box second-box">
+                두 번째 박스 (margin-top: 20px)
+                <div class="measurement">📐 위쪽 마진: 20px</div>
+            </div>
+        </div>
+        
+        <div class="explanation">
+            <h4>실제 간격: 30px (30px + 20px = 50px가 아님!)</h4>
+            <p><strong>마진 겹침 규칙:</strong> 인접한 블록 요소들의 수직 마진은 더 큰 값으로 합쳐집니다.</p>
+            <div class="code-preview">.first-box { margin-bottom: 30px; }
+.second-box { margin-top: 20px; }
+/* 결과: max(30px, 20px) = 30px */</div>
+        </div>
+    </div>
+
+    <!-- 2. 부모-자식 간 마진 겹침 (문제 상황) -->
+    <div class="demo-container">
+        <div class="demo-title">2. 부모-자식 간 마진 겹침 (문제 상황)</div>
+        <div class="parent-child-problem">
+            부모 요소 (margin-top: 20px, padding/border 없음)
+            <div class="child">
+                자식 요소 (margin-top: 30px)
+            </div>
+        </div>
+        
+        <div class="explanation">
+            <h4>🚨 문제: 자식의 margin-top이 부모 밖으로 "전달"됨!</h4>
+            <p>부모에 padding이나 border가 없으면, 자식의 margin-top이 부모의 margin-top과 겹쳐서 부모 요소 위쪽에 30px 마진이 생성됩니다.</p>
+            <div class="code-preview">.parent { margin-top: 20px; } /* padding, border 없음 */
+.child { margin-top: 30px; }
+/* 결과: 부모 위에 max(20px, 30px) = 30px 마진 */</div>
+        </div>
+    </div>
+
+    <!-- 3. 부모-자식 간 마진 겹침 (해결된 상황) -->
+    <div class="demo-container">
+        <div class="demo-title">3. 부모-자식 간 마진 겹침 해결</div>
+        <div class="parent-child-fixed">
+            부모 요소 (padding-top: 1px 추가)
+            <div class="child">
+                자식 요소 (margin-top: 30px)
+            </div>
+        </div>
+        
+        <div class="explanation">
+            <h4>✅ 해결: padding 1px만 추가해도 마진 겹침 방지!</h4>
+            <p>부모에 padding, border, 또는 다른 블록 포맷팅 컨텍스트를 만드는 속성이 있으면 마진 겹침이 발생하지 않습니다.</p>
+            <div class="code-preview">.parent { 
+    margin-top: 20px; 
+    padding-top: 1px; /* 마진 겹침 방지 */
+}
+.child { margin-top: 30px; }
+/* 결과: 부모 위 20px + 자식 위 30px = 정상 동작 */</div>
+        </div>
+    </div>
+
+    <!-- 4. 빈 블록 요소의 마진 겹침 -->
+    <div class="demo-container">
+        <div class="demo-title">4. 빈 블록 요소의 마진 겹침</div>
+        <div class="empty-block-demo">
+            <div class="before">이전 요소 (margin-bottom: 25px)</div>
+            <div class="empty"><!-- 빈 블록: margin-top: 15px, margin-bottom: 35px --></div>
+            <div class="after">이후 요소 (margin-top: 20px)</div>
+        </div>
+        
+        <div class="explanation">
+            <h4>복잡한 겹침: 빈 요소의 위아래 마진도 겹침</h4>
+            <p>빈 블록 요소는 자신의 margin-top과 margin-bottom도 겹치고, 주변 요소들과도 겹칩니다.</p>
+            <div class="code-preview">/* 계산 과정 */
+.before { margin-bottom: 25px; }
+.empty { margin-top: 15px; margin-bottom: 35px; }
+.after { margin-top: 20px; }
+
+/* 결과: max(25px, 15px, 35px, 20px) = 35px */</div>
+        </div>
+    </div>
+
+    <!-- 5. 마진 겹침 방지 방법 -->
+    <div class="demo-container">
+        <div class="demo-title">5. 마진 겹침 방지: Flexbox 활용</div>
+        <div class="no-collapse-flex">
+            <div class="box">첫 번째 박스</div>
+            <div class="box">두 번째 박스</div>
+            <div class="box">세 번째 박스</div>
+        </div>
+        
+        <div class="explanation">
+            <h4>✨ 현대적 해결책: Flexbox + gap</h4>
+            <p>Flexbox나 Grid 컨테이너에서는 마진 겹침이 발생하지 않습니다. gap 속성으로 일정한 간격을 유지할 수 있습니다.</p>
+            <div class="code-preview">.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* 항상 정확히 20px 간격 */
+}</div>
+        </div>
+    </div>
+
+    <div style="background: #e3f2fd; padding: 20px; border-radius: 8px; margin-top: 40px;">
+        <h3>🎯 마진 겹침 핵심 정리</h3>
+        <ul style="line-height: 1.8;">
+            <li><strong>수직 마진만</strong> 겹침 (좌우 마진은 겹치지 않음)</li>
+            <li><strong>블록 요소만</strong> 겹침 (인라인 요소는 겹치지 않음)</li>
+            <li><strong>더 큰 값</strong>으로 합쳐짐 (더하지 않음)</li>
+            <li>부모에 <code>padding</code>, <code>border</code>, <code>overflow: hidden</code> 등이 있으면 방지</li>
+            <li><code>display: flex</code>나 <code>display: grid</code>에서는 발생하지 않음</li>
+        </ul>
+    </div>
+</body>
+</html>
