@@ -13,6 +13,18 @@ Spring Security 7.x는 단순한 버전 업그레이드가 아닌, 보안 설정
 이 글에서는 Spring Security 6.4.5와 7.0.2의 차이점을 중심으로, 실무에서 반드시 알아야 할 핵심 개념과 실전 팁을 다룹니다.
 
 ---
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 컨텐츠내 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3234744071843247"
+     data-ad-slot="1671969273"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+---
 
 ## 목차
 
