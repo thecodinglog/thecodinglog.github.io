@@ -5,3 +5,5 @@ _site
 /.vscode
 /.history
 Gemfile.lock
+.serena
+.DS_Store
