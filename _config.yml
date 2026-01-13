@@ -14,10 +14,10 @@ future: true
 
 # Site settings
 title: codinglog
-subtitle: "코딩일기"
+subtitle: "COTHE's technical blog"
 email: thefuturecreator@gmail.com
 name: Jeongjin Kim
-description: COTHE의 기술 블로그
+description: COTHE's technical blog
 # Base URL of site (i.e. /blog). It should always start with a slash,
 # and never end with a slash. Set it to a blank value if hosting at the
 # root of your server.
